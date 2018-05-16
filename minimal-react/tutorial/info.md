@@ -1,0 +1,186 @@
+# React Redux tutorial: 
+## what problem does Redux solve?
+* Now, it is fine to keep the state within a React component as long as the application remains small.
+* But things could become tricky in more complex scenarios.
+* You will end up with a bloated component filled with methods for managing and updating the state. The frontend shouldn’t know about the business logic.
+
+## Getting to know the Redux store
+* Actions. Reducers. I kind of knew about them. But one thing wasn’t clear to me: how were all the moving parts glued together?
+* The store orchestrates all the moving parts in Redux. 
+* The store in Redux is like the human brain: it’s kind of magic.
+* The Redux store is fundamental: the state of the whole application lives inside the store.
+* So to start playing with Redux we should create a store for wrapping up the state.
+* __createStore__ is the function for creating the Redux store.
+* createStore takes a reducer as the first argument, __rootReducer__ in our case.
+```javascript
+// src/js/store/index.js
+import { createStore } from "redux";
+import rootReducer from "../reducers/index";
+const store = createStore(rootReducer);
+export default store;
+```
+* You may also pass an initial state to createStore. But most of the times you don’t have to. Passing an initial state is useful for server side rendering. Anyway, __the state comes from reducers.__
+* In Redux reducers produce the state. The state is not something you create by hand.
+## Reducers
+* In Redux __the state must return entirely from reducers.__
+* __A reducer is just a Javascript function__. A reducer __takes two parameters: the current state__ and an __action__.
+* The third principle of Redux says that the state is immutable and cannot change in place.
+* This is why the reducer must be pure. A pure function is one that returns the exact same output for the given input
+* In plain React the local state changes in place with setState. In Redux you cannot do that.
+* Creating a reducer is not that hard. It’s a plain Javascript function with two parameters.
+* In our example we’ll be creating a __simple reducer taking the initial state__ as the first parameter. As a __second parameter__ we’ll provide __action__. As of now the reducer will do nothing than returning the initial state.
+```javascript
+// src/js/reducers/index.js
+const initialState = {
+  articles: []
+};
+export default rootReducer;
+const rootReducer = (state = initialState, action) => state;
+```
+* Notice how the initial state is passed as a __default parameter__.
+## Actions
+* Redux reducers are without doubt the most important concept in Redux. __Reducers produce the state of the application.__
+* But __how does a reducer know when to produce the next state?__
+* The second principle of Redux says the __only way to change the state is by sending a signal to the store__.This signal is an __action__. __“Dispatching an action”__ is the process of sending out a signal.
+* Now, how do you change an immutable state? You won’t. __The resulting state is a copy of the current state plus the new data__.
+* __Redux actions are nothing more than Javascript objects.__
+```javascript
+{
+  type: 'ADD_ARTICLE',
+  payload: { name: 'React Redux Tutorial', id: 1 }
+}
+```
+* Every action needs a type property for describing how the state should change.
+* You can specify a payload as well. In the above example the payload is a new article. A reducer will add the article to the current state later.
+* It is a best practice to __wrap every action within a function__. Such function is an __action creator__.
+* Let’s put everything together by creating a simple Redux action.
+```javascript
+// src/js/actions/index.js
+
+export const addArticle = article => ({ type: "ADD_ARTICLE", payload: article });
+```
+* So, the __type property__ is nothing more than a string.
+* The reducer will use that string to determine how to calculate the next state.
+* Since strings are prone to typos and duplicates it’s __better to have action types declared as constants__.
+
+This approach helps __avoiding errors that will be difficult to debug__.
+```javascript
+// src/js/constants/action-types.js
+
+export const ADD_ARTICLE = "ADD_ARTICLE";
+```
+* Now open up again src/js/actions/index.jsand update the action to use action types:
+```javascript
+// src/js/actions/index.js
+import { ADD_ARTICLE } from "../constants/action-types";
+export const addArticle = article => ({ type: ADD_ARTICLE, payload: article });
+```
+## Refactoring the reducer
+
+### Before moving forward let’s recap the main Redux concepts:
+* the _Redux store__ is like a brain: it’s in charge for __orchestrating all the moving parts__ in Redux
+* the __state of the application lives as a single, immutable object__ within the store
+* as soon as __the store receives an action it triggers a reducer__
+* the __reducer returns the next state__
+#### What’s a Redux reducer made of?
+* A reducer is a Javascript function taking __two parameters:__ the __state__ and the __action__
+* A reducer function has a __switch statement__
+* The __reducer calculates the next state depending on the action type__. Moreover, __it should return at least the initial state when no action type matches__.
+* When the action type matches a case clause __the reducer calculates the next state__ and __returns a new object__. 
+```javascript
+// ...
+  switch (action.type) {
+    case ADD_ARTICLE:
+      return { ...state, articles: [...state.articles, action.payload] };
+    default:
+      return state;
+  }
+```
+* The reducer we created in the previous section does nothing than returning the initial state. Let’s fix that.
+```javascript
+import { ADD_ARTICLE } from "../constants/action-types";
+
+const initialState = {
+  articles: []
+};
+
+const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_ARTICLE:
+      state.articles.push(action.payload);
+      return state;
+    default:
+      return state;
+  }
+};
+
+export default rootReducer;
+```
+* Although it’s valid code the __above reducer breaks__ the main Redux principle: __immutability__.
+* Array.prototype.push is an impure function: it alters the original array.
+* Making our reducer compliant is easy. Using __Array.prototype.concat__ in place of Array.prototype.push is enough to keep the initial array immutable:
+```javascript
+import { ADD_ARTICLE } from "../constants/action-types";
+
+const initialState = {
+  articles: []
+};
+
+const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_ARTICLE:
+      return { ...state, articles: state.articles.concat(action.payload) };
+    default:
+      return state;
+  }
+};
+
+export default rootReducer;
+```
+* We’re not done yet! With the spread operator we can make our reducer even better:
+```javascript
+import { ADD_ARTICLE } from "../constants/action-types";
+
+const initialState = {
+  articles: []
+};
+
+const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_ARTICLE:
+      return { ...state, articles: [...state.articles, action.payload] };
+    default:
+      return state;
+  }
+};
+
+export default rootReducer;
+```
+* In the example above the initial state is left utterly untouched.
+* The initial articles array doesn’t change in place.
+* The initial state object doesn’t change as well. 
+* The resulting state is a copy of the initial state.
+
+### There are two key points for __avoiding mutations in Redux:__
+
+1. Using concat(), slice(), and …spread for arrays
+2. Using Object.assign() and …spread for objects
+* The object spread operator is still in stage 3. Install Object rest spread transform to __avoid a SyntaxError Unexpected token__ when using the object spread operator in Babel:
+* __npm i --save-dev babel-plugin-transform-object-rest-spread__
+* Open up .babelrc and update the configuration:
+```json
+{
+    "presets": ["env", "react"],
+    "plugins": ["transform-object-rest-spread"]
+}
+```
+* __Redux protip:__ the reducer will grow as your app will become bigger. You can split a big reducer into separate functions and combine them with combineReducers
+
+## Redux store methods
+* Redux itself is a small library (2KB). The Redux store exposes a simple API for managing the state. The most important methods are:
+
+1. getState for accessing the current state of the application
+2. dispatch for dispatching an action
+3. subscribe for listening on state changes
+* We will play in the brower’s console with the above methods.
+* To do so we have to export as global variables the store and the action we created earlier.
