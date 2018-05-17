@@ -12,9 +12,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 1: May 17, 2018
 
-Today's Progress: 
+Today's Progress: Going over yesterday's work to help consolidate teh learning. 
 
-Thoughts: 
+Thoughts: Not compiling, not sure why, will try again tomorrow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

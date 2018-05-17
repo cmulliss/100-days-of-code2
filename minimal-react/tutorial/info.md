@@ -3,6 +3,9 @@
 * Now, it is fine to keep the state within a React component as long as the application remains small.
 * But things could become tricky in more complex scenarios.
 * You will end up with a bloated component filled with methods for managing and updating the state. The frontend shouldn’t know about the business logic.
+* Redux solves a problem that might not be clear in the beginning: it helps giving each React component the exact piece of state it needs.
+* Redux holds up the state within a single location.
+* Also with Redux the logic for fetching and managing the state lives outside React.
 
 ## Getting to know the Redux store
 * Actions. Reducers. I kind of knew about them. But one thing wasn’t clear to me: how were all the moving parts glued together?
