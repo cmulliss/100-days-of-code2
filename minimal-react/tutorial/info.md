@@ -187,3 +187,81 @@ export default rootReducer;
 3. subscribe for listening on state changes
 * We will play in the brower’s console with the above methods.
 * To do so we have to export as global variables the store and the action we created earlier.
+head over http://localhost:8080/ and open up the console.
+
+* Since we’ve exported the store as a global variable we can access its methods. Give it a try!
+* Start off by accessing the current state:
+
+store.getState()
+output:
+
+{articles: Array(0)}
+Zero articles. In fact we haven’t update the initial state yet.
+
+To make things interesting we can listen for state updates with subscribe.
+
+The subscribe method accepts a callback that will fire whenever an action is dispatched. Dispatching an action means notifying the store that we want to change the state.
+
+Register the callback with:
+
+store.subscribe(() => console.log('Look ma, Redux!!'))
+To change the state in Redux we need to dispatch an action. To dispatch an action you have to call the dispatch method.
+
+We have one action at our disposal: addArticle for adding a new item to the state.
+
+Let’s dispatch the action with:
+
+store.dispatch( addArticle({ name: 'React Redux Tutorial for Beginners', id: 1 }) )
+Right after running the above code you should see:
+
+Look ma, Redux!!
+To verify that the state changed run again:
+
+store.getState()
+The output should be:
+
+{articles: Array(1)}
+And that’s it. This is Redux in its simplest form.
+
+Was that difficult?
+
+Take your time to explore these three Redux methods as an exercise. Play with them from the console:
+
+1. getState for accessing the current state of the application
+2. dispatch for dispatching an action3.  subscribe for listening on state changes
+* That’s everything you need to know for getting started with Redux.
+
+## Connecting React with Redux
+* After learning Redux I realized it wasn’t so complex.
+1. I knew how to access the current state with getState.
+2. I knew how to dispatch an action with dispatch
+3. I knew how to listen for state changes with subscribe
+* Yet I didn’t know how to couple React and Redux together.
+* For React there is react-redux.
+* npm i react-redux --save-dev
+* Simple App, made of the following components:
+1. an App component
+2. a List component for displaying articles
+3. a Form component for adding new articles
+* __react-redux__ is a Redux binding for React. It’s a small library for connecting Redux and React in an efficient way.
+* The most important method you’ll work with is __connect__
+* it connects a React component with the Redux store.
+* You will use connect with two or three arguments depending on the use case. The fundamental things to know are:
+1. the mapStateToProps function
+2. the mapDispatchToProps function
+* mapStateToProps does exactly what its name suggests: __it connects a part of the Redux state__ to the __props of a React component__. By doing so a connected React component will have access to the exact part of the store it needs.
+* mapDispatchToProps does something similar, but for actions. __mapDispatchToProps connects Redux actions to React props__. This way a connected React component will be able to dispatch actions.
+## App component and Redux store
+* To start off connecting Redux with React we’re going to use Provider.
+* Provider is an high order component coming from react-redux.
+* Provider wraps up your React application and makes it aware of the entire Redux’s store.
+* Why so? We saw that in Redux __the store manages everything__. React must talk to the store for accessing the state and dispatching actions.
+*  Provider wraps up your entire React application. Moreover it gets the store as a prop.
+```javascript
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  ```
+  
+
