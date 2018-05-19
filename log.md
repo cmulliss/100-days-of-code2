@@ -32,7 +32,17 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 2: Saturday May 18, 2018
+Day 3: Saturday May 19, 2018
+
+Today's Progress: Beginning to understand more of how state works with redux, and how it gets passed via props.
+
+Thoughts: Will continue with this tomorrow and hope that I can fill in the missing gaps in my understanding.
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 4: Sunday May 20, 2018
 
 Today's Progress: 
 
@@ -42,7 +52,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 3: May 19, 2018
+Day 5: Monday May 21, 2018
 
 Today's Progress: 
 
@@ -52,7 +62,67 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 4: May 20, 2018
+Day 6: Tuesday May 22, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day7: Wednesday May 23, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 8: Thursday May 24, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 9: Friday May 25, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 10: Saturday May 26, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 5: Monday May 21, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 5: Monday May 21, 2018
 
 Today's Progress: 
 
