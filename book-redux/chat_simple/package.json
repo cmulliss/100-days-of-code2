@@ -9,6 +9,7 @@
   "devDependencies": {
     "babel-cli": "6.24.1",
     "concurrently": "3.4.0",
+    "prettier-eslint": "^8.8.1",
     "react-scripts": "1.0.14"
   },
   "scripts": {

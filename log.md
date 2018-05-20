@@ -44,9 +44,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 4: Sunday May 20, 2018
 
-Today's Progress: 
+Today's Progress: Repeating first part of the tutorial mentioned above, aftere trying a couple of others, but deciding they were too in depth for this state.
 
-Thoughts: 
+Thoughts: Feeling happier about this, re-doing this particular tutorial a good move!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
