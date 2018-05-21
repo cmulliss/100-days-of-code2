@@ -54,9 +54,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 5: Monday May 21, 2018
 
-Today's Progress: 
+Today's Progress: Continued with the tutorial.
 
-Thoughts: 
+Thoughts: Just going over stuff.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
