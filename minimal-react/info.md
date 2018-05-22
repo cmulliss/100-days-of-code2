@@ -263,5 +263,50 @@ render(
     <App />
   </Provider>,
   ```
-  
+* Create App component src/js/components/App.js
+```javascript
+import React from "react";
+import List from "./List";
+const App = () => (
+      <List />
+);
+export default App;
+```
+### List component and Redux state
+* List will interact with the redux store
+* Create List component src/js/components/List.js
+```javascript
+import React from "react";
+import { connect } from "react-redux";
 
+const mapStateToProps = state => {
+  return { articles: state.articles };
+};
+const ConnectedList = ({ articles }) => (
+  <ul className="list-group list-group-flush">
+    {articles.map(el => (
+      <li className="list-group-item" key={el.id}>
+        {el.title}
+      </li>
+    ))}
+  </ul>
+);
+const List = connect(mapStateToProps)(ConnectedList);
+export default List;
+```
+* Component is connected to the redux store with 'connect'
+* Connect takes at least one argument
+* Since we want List to get a list of articles it’s a matter of connecting state.articles with the component.
+* How? With __mapStateToProps__.
+* The List component receives the prop.articles which is a copy of the articles array. Such array lives inside the Redux state we created earlier. It comes from the reducer.
+* Then it’s a matter of using the prop inside JSX for generating a list of articles: 
+```javascript
+{articles.map(el => (
+  <li className="list-group-item" key={el.id}>
+    {el.title}
+  </li>
+))}
+```
+
+* Finally the component gets exported as List. List is the result of connecting the stateless component ConnectedList with the Redux store.
+* A stateless component does not have its own local state. Data gets passed to it as props.

@@ -64,9 +64,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 6: Tuesday May 22, 2018
 
-Today's Progress: 
+Today's Progress: Founda really good youtube tutorial, so worked through nearly all of it.
 
-Thoughts: 
+Thoughts: Will complete this and go over it again.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
