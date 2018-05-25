@@ -64,7 +64,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 6: Tuesday May 22, 2018
 
-Today's Progress: Founda really good youtube tutorial, so worked through nearly all of it.
+Today's Progress: Found a really good youtube tutorial, so worked through nearly all of it.
 
 Thoughts: Will complete this and go over it again.
 
@@ -74,9 +74,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day7: Wednesday May 23, 2018
 
-Today's Progress: 
+Today's Progress: Realised the tutorial was using mostly es5, so decided I need to improve my es6 understanding.
 
-Thoughts: 
+Thoughts: Did clarify some areas, but need to stick to es6 to avoid confusion.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -84,9 +84,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 8: Thursday May 24, 2018
 
-Today's Progress: 
+Today's Progress: Started an es6 crash course.
 
-Thoughts: 
+Thoughts: Really useful
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -94,9 +94,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 9: Friday May 25, 2018
 
-Today's Progress: 
+Today's Progress: Covered most of this section, learned some really useful things. Filling in gaps in my knowledge. Good explanations in this tutorial.
 
-Thoughts: 
+Thoughts: Really needed to do this as was a bit woolly about exactly how to use fat arrows etc. Besides, it was fun!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
