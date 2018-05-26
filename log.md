@@ -104,9 +104,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 10: Saturday May 26, 2018
 
-Today's Progress: 
+Today's Progress: Completed es6 section of the tutorial.
 
-Thoughts: 
+Thoughts: Brilliant tuorial, best explanation of the spread operator ever!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
