@@ -112,11 +112,11 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 5: Monday May 21, 2018
+Day 5: Sunday May 27, 2018
 
-Today's Progress: 
+Today's Progress: More on mapping and props.
 
-Thoughts: 
+Thoughts: Getting complicated again.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
