@@ -134,9 +134,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 13: Tuesday May 29, 2018
 
-Today's Progress: 
+Today's Progress: Using props to pass functions down through 2 levels. Lots of explanation to help clarify.
 
-Thoughts: 
+Thoughts: Good, but still a bit confusing. Will get back to redux after this.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
