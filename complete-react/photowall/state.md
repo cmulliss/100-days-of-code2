@@ -23,13 +23,33 @@
 ## How we are doing this
 
 * Inside of the Main component, where our state lives, we create a fn that's going to be responsible for updating the state
+
+```javascript
+removePhoto(postRemoved) {
+    console.log(postRemoved.description); }
+```
+
 * We will pass that fn all the way down to the PhotoWall component as a prop
 * Then from our PhotoWall component, we will pass that fn down to each photo that it has created
 * And, for each photo we will link that fn to a remove button
 * So, whenever we click the remove button, it's going to invoke the fn, and remove the specific photo
-* Pass in function as props in Main, onRemovePhoto={this.removePhoto}
+* Pass in function as props in Main, onRemovePhoto
+
+```javascript
+<Title title={"PhotoWall"} />
+        <PhotoWall posts={this.state.posts}
+        onRemovePhoto={this.removePhoto} />
+```
+
 * Now, inside the PhotoWall component, we have to pass down the method to every single photo (that's being mapped over) as a prop.
-* For every photo being generated, give it a prop
+* For every photo being generated, give it a prop, onRemovePhoto equal to props.onRemovePhoto
+
+```javascript
+<Photo key={index} post={post} onRemovePhoto={props.onRemovePhoto} />
+```
+
 * Now can access this method in every single photo
 * So when we click the remove button, we want to invoke the fn removePhoto passing in the proper photo as argument
-* 
+* We are passing in the method from Main.js to the PhotoWall, 
+* and from PhotoWall we are accessing this method, such that in turn, we are passing it to every single photo that's being mapped over
+* Now can access this method in every single photo, such that when we click the remove button 

@@ -144,9 +144,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 14: Wednesday May 30, 2018
 
-Today's Progress: 
+Today's Progress: More react.
 
-Thoughts: 
+Thoughts: Very tired after working all day, so not able to concentrate for long. Will make it up tomorrow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
