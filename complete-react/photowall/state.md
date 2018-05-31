@@ -41,7 +41,7 @@ removePhoto(postRemoved) {
         onRemovePhoto={this.removePhoto} />
 ```
 
-* Now, inside the PhotoWall component, we have to pass down the method to every single photo (that's being mapped over) as a prop.
+* Now, inside the PhotoWall component, we have to pass down the method to every single photo (that's being mapped over) once again, as a prop.
 * For every photo being generated, give it a prop, onRemovePhoto equal to props.onRemovePhoto
 
 ```javascript
@@ -53,3 +53,95 @@ removePhoto(postRemoved) {
 * We are passing in the method from Main.js to the PhotoWall, 
 * and from PhotoWall we are accessing this method, such that in turn, we are passing it to every single photo that's being mapped over
 * Now can access this method in every single photo, such that when we click the remove button 
+* In Photo.js, using 'onClick', when we click the remove button, we are setting the onClick handler method to an arrow fn.
+
+```javascript
+iv className='button-container'>
+        <button className='remove-button' onClick = {() => {
+            props.onRemovePhoto(post)
+```
+* Whenever we click the remove button it will invoke this => fn
+* so by calling props.onRemovePhoto, we are basically calling this method that was passed all the way down to it as a prop of onRemovePhoto, 
+* and it's going to call this method such that it passes in a prop of post
+*  props.onRemovePhoto(post)
+* and it should therefore console.log the photo description in which we clicked remove
+* We are able to access the photo whenever we press 'remove'
+* Now the photo we just clicked, we want to use it to update the state of our component such that we are removing it from the array of posts and by updating this state it will re-trigger the render method
+* To update the state of the component, in Main.js, add this.setState, and inside this pass in a fn, and that fn is going to return a brand new object which is going to serve as our updated state. 
+* The first argument is the current state of our component, 'state'
+* We want to update this current state so it removes one of the photos, the one clicked on
+* To do this, return a new list of posts, get current state and filter out photo we just passed in
+* filter takes any fn that loops through every single post and specify return value updating the post array such that we want all the posts that don't equal the removed post
+
+```javascript
+ removePhoto(postRemoved) {
+    console.log(postRemoved.description);
+    this.setState(state => ({
+      posts: state.posts.filter(post => post !== postRemoved)
+    })) }
+```
+* Thus we are filtering out the removed post from the array and returning the updated state of the posts property
+
+### Binding
+
+* error: this.setState is not a function
+* inside of our removePhoto method, this context is not defined
+* 'this' inside of the render method is ok, it points to the component instance that is being rendered to the DOM
+* 'this' works fine in the constructor too
+* however, 'this' inside removePhoto points to null, it's not bound to our component, we cannot use any of its methods, the binding in our removePhoto method is broken
+* How do we update the components state if not able to reference the component instance, to which I need to update the state?
+* The problem is because this is part of an event handler ...
+
+```javascript
+ removePhoto(postRemoved) {
+    console.log(postRemoved.description);
+    this.setState(state => ({
+      posts: state.posts.filter(post => post !== postRemoved)
+    })) }
+```
+* ... we have lost the 'this' bindings such that it's now in the context of a fn, NOT our component, and naturally, the context of a fn is null by default
+* How do we restore the context of 'this'?
+* Inside our constructor we will modify our method, removePhoto:
+
+```javascript
+removePhoto = this.removePhoto.bind(this);
+```
+
+## Summary
+
+* access the removePhoto method (above) inside of every Photo component.
+* We passed the method to our PhotoWall as a prop, 
+* and from the PhotoWall we passed it down to every single photo
+* and that same fn, we made it the event handler of every single 'remove' button for every single photo
+* so whenever we click the 'remove' button of one of these photos, it will trigger the onClick handler and call the fn removePhoto, passing in its post as an argument, 
+* and that post itself that we clicked, using it to update the state of the component by filtering it out from the post array of the current state
+* thereby updating the state wit a new posts array that doesn't include the removed photo
+* Removing a photo, it would get filtered from the post array, updating the state and the post property of our state would then only have 2 photos
+* the Main component is notified that state just updated, so re-run the UI
+* so it re-invokes render so we are passing in a filtered array of our updated state to the PhotoWall
+
+## Prop Types
+
+* install prop-types
+* import PropTypes
+* In PhotoWall
+```javascript
+<div className='photoGrid'>
+      {props.posts.map((post, index) => (
+        <Photo key={index} post={post} onRemovePhoto={props.onRemovePhoto} />
+      ))}
+    </div>
+  )
+}
+PhotoWall.propTypes = {
+  posts: PropTypes.array.isRequired,
+  onRemovePhoto: PropTypes.func.isRequired
+}
+```
+* In Photo
+```javascript
+Photo.propTypes = {
+  post: PropTypes.object.isRequired,
+  onRemovePhoto: PropTypes.func.isRequired
+}
+```
