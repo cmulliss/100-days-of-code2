@@ -154,9 +154,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 15: Thursday May 31, 2018
 
-Today's Progress: 
+Today's Progress: completed state, proptypes and lifecycle methods.
 
-Thoughts: 
+Thoughts: Getting there!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

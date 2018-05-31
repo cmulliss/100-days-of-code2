@@ -145,3 +145,23 @@ Photo.propTypes = {
   onRemovePhoto: PropTypes.func.isRequired
 }
 ```
+
+## Lifeccylc methods
+
+* Before the component is inserted into the DOM, the constructor is invokes and initialises the component state with a post property of an empty array
+* The render method would then get caught passing in an empty array to map out the photos
+* use componentDidMount
+* Ajax requests, or any asynchronous API requests should be performed AFTER teh component is mounted, after its inserted into the DOM and added to the view
+* Whenever fetching data from a database, make sure it's inside __componentDidMount__
+* Do not make the mistake of placing your request inside __componentWillMount__
+* __componentDidUpdate__ updates state and triggers a re-render
+
+## Routing and SPA
+
+* What is a single page App?
+* when you visit an SPA the browser downloads the entire contents all at once, in a single request
+* By doing so, whatever the user navigates between different pages of our app, the browser already has access to all your content of your next page
+* No need to grab from server and refresh our pitch
+* More efficient
+* resource for tutorial
+* url("https://image.flaticon.com/icons/svg/60/60740.svg") center no-repeat;

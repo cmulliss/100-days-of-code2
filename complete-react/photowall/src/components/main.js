@@ -37,6 +37,15 @@ export default class Main extends Component {
       posts: state.posts.filter(post => post !== postRemoved)
     }));
   }
+  // lifecycle methods
+  componentDidMount() {
+    console.log("component did mount");
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log("componentDidUpdate and re-render");
+    console.log(prevState.posts);
+    console.log(this.state);
+  }
 
   render() {
     return (
