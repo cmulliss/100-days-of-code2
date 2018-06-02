@@ -1,8 +1,16 @@
 import React from 'react'
 import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import './css/styles.css'
 import Main from './components/main'
+
+render(
+  <BrowserRouter>
+    <Main />
+  </BrowserRouter>,
+  document.querySelector('#root')
+)
 
 // import App from './App'
 
@@ -20,8 +28,6 @@ import Main from './components/main'
 //  instance of the class that's being renderd.
 // checking whether any tasks passed on from the component
 // instance as props.
-
-render(<Main />, document.querySelector('#root'))
 
 // can also add unique key provided by 'map'
 // only use key if no stable index in array

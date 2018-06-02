@@ -165,3 +165,9 @@ Photo.propTypes = {
 * More efficient
 * resource for tutorial
 * url("https://image.flaticon.com/icons/svg/60/60740.svg") center no-repeat;
+
+### Routing
+* Browser Router: keeps track of URL changes
+* Link: invokes change in URL on click
+* Routes: contain a given path
+* Use 'component' for one and 'render' for more than one 

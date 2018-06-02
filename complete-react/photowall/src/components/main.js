@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-
+import { Route } from "react-router-dom";
 import Title from "./title";
 import PhotoWall from "./photo-wall";
+import AddPhoto from "./add-photo";
 
 // PhotoWall instance will pass in the array of posts as props
 export default class Main extends Component {
@@ -27,9 +28,13 @@ export default class Main extends Component {
         imageLink:
           "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
       }
-    ]
+    ],
+    screen: "photos" // one of 2 values
+    /* state to decide what screen to display when app first launches either photos, which will display the PhotoWall screen or AddPhotos which will display the second screen where we have to add photos, going to use this piece of state to switch between the 2 screens
+    */
   };
   removePhoto = this.removePhoto.bind(this);
+  navigate = this.navigate.bind(this);
 
   removePhoto(postRemoved) {
     console.log(postRemoved.description);
@@ -37,6 +42,13 @@ export default class Main extends Component {
       posts: state.posts.filter(post => post !== postRemoved)
     }));
   }
+  // declare a method navigate to pass down as props
+  navigate() {
+    this.setState({
+      screen: "addPhoto"
+    });
+  }
+
   // lifecycle methods
   componentDidMount() {
     console.log("component did mount");
@@ -50,13 +62,27 @@ export default class Main extends Component {
   render() {
     return (
       <div>
-        <Title title={"PhotoWall"} />
-        <PhotoWall posts={this.state.posts} onRemovePhoto={this.removePhoto} />
+        <Route
+          path="/"
+          render={() => (
+            <div>
+              <Title title={"PhotoWall"} />
+              <PhotoWall
+                posts={this.state.posts}
+                onRemovePhoto={this.removePhoto}
+                onNavigate={this.navigate}
+              />
+            </div>
+          )}
+        />
+
+        <Route path="/AddPhoto" component={AddPhoto} />
       </div>
     );
   }
 }
+
 /*
 The main component is managing state, we added the array as a distinct piece of state of our component. Updating our array will trigger updates to page (re-render DOM). The photoWall accesses the updated array of state, passes it down as data and renders the updated photos.
-The UI is just a fn of state, when you change state, UI updates accordingly. 
+The UI is just a fn of state, when you change state, UI updates accordingly 
 */
