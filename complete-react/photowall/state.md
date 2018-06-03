@@ -170,4 +170,9 @@ Photo.propTypes = {
 * Browser Router: keeps track of URL changes
 * Link: invokes change in URL on click
 * Routes: contain a given path
-* Use 'component' for one and 'render' for more than one 
+* Use 'component' for one and 'render' for multiple components enclosed by a div, that you need to render on a given URL, choose the render prop. Ror a single component that we need to render use 'component'.
+
+### Setting up routing and logic for AddPhoto page
+
+* want to add photos to this
+* in AddPhoto.js, 

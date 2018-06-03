@@ -28,13 +28,9 @@ export default class Main extends Component {
         imageLink:
           "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
       }
-    ],
-    screen: "photos" // one of 2 values
-    /* state to decide what screen to display when app first launches either photos, which will display the PhotoWall screen or AddPhotos which will display the second screen where we have to add photos, going to use this piece of state to switch between the 2 screens
-    */
+    ]
   };
   removePhoto = this.removePhoto.bind(this);
-  navigate = this.navigate.bind(this);
 
   removePhoto(postRemoved) {
     console.log(postRemoved.description);
@@ -42,11 +38,13 @@ export default class Main extends Component {
       posts: state.posts.filter(post => post !== postRemoved)
     }));
   }
-  // declare a method navigate to pass down as props
-  navigate() {
-    this.setState({
-      screen: "addPhoto"
-    });
+  // adds new photo from AddPhoto to state array
+  // now need to invoke this fn inside AddPhoto
+  // pass it down as props, see below
+  addPhoto(postSubmitted) {
+    this.setState(state => ({
+      posts: state.posts.concat([postSubmitted])
+    }));
   }
 
   // lifecycle methods
@@ -63,6 +61,7 @@ export default class Main extends Component {
     return (
       <div>
         <Route
+          exact
           path="/"
           render={() => (
             <div>
@@ -76,7 +75,7 @@ export default class Main extends Component {
           )}
         />
 
-        <Route path="/AddPhoto" component={AddPhoto} />
+        <Route path="/AddPhoto" render={() => <AddPhoto onAddPhoto= () />} />
       </div>
     );
   }

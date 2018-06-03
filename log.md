@@ -164,9 +164,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 16: Friday June 1, 2018
 
-Today's Progress: 
+Today's Progress: Started routing.
 
-Thoughts: 
+Thoughts: Interesting as starts with examples showing why you dont't use state to route.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -174,9 +174,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 17: Saturday June 2, 2018
 
-Today's Progress: 
+Today's Progress: Continued routing
 
-Thoughts: 
+Thoughts: Almost there, certainly learning some new things about routing.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -184,9 +184,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 18: Sunday June 3, 2018
 
-Today's Progress: 
+Today's Progress: Adding photos in photowall app tutorial
 
-Thoughts: 
+Thoughts: Almost finished this section, looking forward to redux again
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

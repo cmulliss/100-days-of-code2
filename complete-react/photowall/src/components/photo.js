@@ -11,7 +11,6 @@ const Photo = props => {
       </figurecaption>
       <div className='button-container'>
         <button
-          className='remove-button'
           onClick={() => {
             props.onRemovePhoto(post)
           }}
