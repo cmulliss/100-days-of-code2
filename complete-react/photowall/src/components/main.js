@@ -31,6 +31,7 @@ export default class Main extends Component {
     ]
   };
   removePhoto = this.removePhoto.bind(this);
+  addPhoto = this.addPhoto.bind(this);
 
   removePhoto(postRemoved) {
     console.log(postRemoved.description);
@@ -74,8 +75,16 @@ export default class Main extends Component {
             </div>
           )}
         />
-
-        <Route path="/AddPhoto" render={() => <AddPhoto onAddPhoto= () />} />
+        <Route
+          path="/AddPhoto"
+          render={() => (
+            <AddPhoto
+              onAddPhoto={addedPost => {
+                console.log(addedPost);
+              }}
+            />
+          )}
+        />
       </div>
     );
   }

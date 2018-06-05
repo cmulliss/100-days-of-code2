@@ -194,9 +194,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 19: Monday June 4, 2018
 
-Today's Progress: 
+Today's Progress: WAtched some functional programming Youtube videos. Got stuck again with react though.
 
-Thoughts: 
+Thoughts: Try again!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -204,9 +204,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 20: Tuesday June 5, 2018
 
-Today's Progress: 
+Today's Progress: Doing better today, having another go at using AJAX for API calls.
 
-Thoughts: 
+Thoughts: Feeling a lot more positive about this. 
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
