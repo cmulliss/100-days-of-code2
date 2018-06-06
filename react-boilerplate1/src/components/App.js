@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 
+import PokemonList from "./pokemon-list";
+
 export default class App extends Component {
   state = {
-    type: "1"
+    type: "1",
+    pokemonList: []
   };
+  //-----functions, methods of the class
+  // related to selectDropdown, provided to the onChange property
   onSelectTypeChange(event) {
     // console.log("selectchange", event.target.value);
     this.setState({
@@ -11,19 +16,34 @@ export default class App extends Component {
     });
   }
   // default behaviour of button is to force a reload
+  // provided to onClick method of button
+  // resolved in the promise
   onButtonClick(event) {
     event.preventDefault();
     // console.log(this.state.type + " " + "do something with this");
-    const API_URL = `https://pokeapi.co/api/v2/type/3/`;
-
-    fetch(API_URL).then(result => {
-      //console.log(result);
-      return result.json();
-      console.log(result.json);
-    });
+    const API_URL = `https://pokeapi.co/api/v2/type/4/`;
+    // data is the whole object
+    fetch(API_URL)
+      .then(result => {
+        //console.log(result);
+        return result.json();
+        console.log(result.json);
+      })
+      .then(data => {
+        console.log(data);
+        console.log(data.pokemon);
+        this.setState({
+          pokemonList: data.pokemon
+        });
+      })
+      .catch(error => console.log(error));
   }
+  // set the state to an empty array, then check the app state
+  // then bind the results of the ajax call to the state, so state
+  // now is the complete array of 70 pokemon
   render() {
-    // console.log("app state: ", this.state);
+    console.log("app state: ", this.state);
+
     return (
       <div className="container app-container">
         <div>
@@ -45,6 +65,7 @@ export default class App extends Component {
             </button>
           </form>
         </div>
+        <PokemonList pokemonResult={"hello string"} />
       </div>
     );
   }
