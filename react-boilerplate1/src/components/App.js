@@ -20,9 +20,12 @@ export default class App extends Component {
   // resolved in the promise
   onButtonClick(event) {
     event.preventDefault();
-    // console.log(this.state.type + " " + "do something with this");
-    const API_URL = `https://pokeapi.co/api/v2/type/4/`;
+
+    //const type = this.state.type;
+    const API_URL = `https://pokeapi.co/api/v2/type/${this.state.type}/`;
+
     // data is the whole object
+    //fetch(`https://pokeapi.co/api/v2/type/${type}/`)
     fetch(API_URL)
       .then(result => {
         //console.log(result);
@@ -65,8 +68,10 @@ export default class App extends Component {
             </button>
           </form>
         </div>
-        <PokemonList pokemonResult={"hello string"} />
+        <PokemonList pokemonResult={this.state.pokemonList} />
       </div>
     );
   }
 }
+// want to pass down to child, which is <PokemonList/>
+// pass this.state.pokemonList down
