@@ -45,7 +45,7 @@ export default class App extends Component {
   // then bind the results of the ajax call to the state, so state
   // now is the complete array of 70 pokemon
   render() {
-    console.log("app state: ", this.state);
+    //console.log("app state: ", this.state);
 
     return (
       <div className="container app-container">

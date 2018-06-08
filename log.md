@@ -214,9 +214,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 21: Wednesday June 6, 2018
 
-Today's Progress: 
+Today's Progress: Pokemon finder app tutorial, going ok.
 
-Thoughts: 
+Thoughts: This tutorial seems quite fun, that is really helpful for learning stuff.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -224,9 +224,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 22: Thursday June 7, 2018
 
-Today's Progress: 
+Today's Progress: More pokemon.
 
-Thoughts: 
+Thoughts: Great, really enjoying this, getting better at anticipating what's needed next in the code.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -234,9 +234,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 23: Friday June 8, 2018
 
-Today's Progress: 
+Today's Progress: Still going strong with pikachu et al!
 
-Thoughts: 
+Thoughts: Really like the tutors style of teaching, humour and experimentation.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

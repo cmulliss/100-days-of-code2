@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Pokemon from './pokemon'
+
 class PokemonList extends Component {
   //   constructor (props) {
   //     super(props)
@@ -11,12 +13,20 @@ class PokemonList extends Component {
     let counter = 0
 
     return this.props.pokemonResult.map(pokemons => {
-      console.log(pokemons)
+      // console.log(pokemons)
       return (
-        <li className='card' key={counter++}>
-          name: {pokemons.pokemon.name}
-        </li>
+        <Pokemon
+          key={counter++}
+          url={pokemons.pokemon.url}
+          name={pokemons.pokemon.name}
+        />
       )
+      //   return (
+      //     <li className='card' key={counter++}>
+      //       name: {pokemons.pokemon.name} <br />
+      //       url: {pokemons.pokemon.url}
+      //     </li>
+      //   )
     })
   }
   // ------
