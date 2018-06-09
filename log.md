@@ -236,7 +236,7 @@ Day 23: Friday June 8, 2018
 
 Today's Progress: Still going strong with pikachu et al!
 
-Thoughts: Really like the tutors style of teaching, humour and experimentation.
+Thoughts: Really like the tutor's style of teaching, humour and experimentation.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -244,9 +244,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 24: Saturday June 9, 2018
 
-Today's Progress: 
+Today's Progress: Completed pokemon app. Tutor then showed a flaw in this, that would be addressed better by using redux. Currently whole app re-rendering unnecessarily. So, on to redux.
 
-Thoughts: 
+Thoughts: Still finding the tutorial excellent.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
