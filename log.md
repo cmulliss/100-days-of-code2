@@ -254,9 +254,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 25: Sunday June 10, 2018
 
-Today's Progress: 
+Today's Progress: Started zookeeper app with redux section of tutorial.
 
-Thoughts: 
+Thoughts: Good, but more confusing.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
