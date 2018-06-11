@@ -5,9 +5,12 @@ class AnimalList extends Component {
   // ------fn to render animalsList
   renderAnimalsList () {
     return this.props.animals.map(animal => {
+      console.log('render animalList: ', animal)
       return (
         <li>
-          <p>Species: {animal.species}</p>
+          <p>
+            Species: {animal.species} <br />Name: {animal.name}
+          </p>
         </li>
       )
     })
@@ -17,26 +20,26 @@ class AnimalList extends Component {
   render () {
     console.log('animalList: ', this)
 
-    return <div>animal list</div>
+    return <ul>{this.renderAnimalsList()}</ul>
   }
 }
 
 function mapStateToProps (state) {
-  //   return {
-  //     name: 'motley'
-  //   }
-
-  // to see what is inside the state
-  // console.log('mapStateToProps', state)
-  // the RHS, the reducer side, bound to the state of our app,
-  // the state of our store,
-  // binding the state of the animals to the animals inside our components
   return {
     animals: state.animals
   }
 }
 
 export default connect(mapStateToProps)(AnimalList)
+//   return {
+//     name: 'motley'
+//   }
+
+// to see what is inside the state
+// console.log('mapStateToProps', state)
+// the RHS, the reducer side, bound to the state of our app,
+// the state of our store,
+// binding the state of the animals to the animals inside our components
 
 /* 1. we need to bring the state of the app to the props on the component usiing redux connect
 2. mapping above state to props, can see 'motley' on props in console,
