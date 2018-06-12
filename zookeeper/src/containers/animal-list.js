@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'react-redux'
+
+import selectAnAnimal from '../actions/'
 
 class AnimalList extends Component {
   // ------fn to render animalsList
   renderAnimalsList () {
+    let counter = 0
     return this.props.animals.map(animal => {
       console.log('render animalList: ', animal)
       return (
-        <li>
+        <li
+          onClick={() => {
+            console.log('you clicked the <li>')
+          }}
+          className='list-group-item'
+          key={counter++}
+        >
           <p>
             Species: {animal.species} <br />Name: {animal.name}
           </p>
@@ -20,7 +30,7 @@ class AnimalList extends Component {
   render () {
     console.log('animalList: ', this)
 
-    return <ul>{this.renderAnimalsList()}</ul>
+    return <ul className='list-group'>{this.renderAnimalsList()}</ul>
   }
 }
 
@@ -30,7 +40,19 @@ function mapStateToProps (state) {
   }
 }
 
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({
+    selectAnAnimal
+  })
+}
+
 export default connect(mapStateToProps)(AnimalList)
+
+// a wrapped component because it's wrapped inside the connect method
+// and provided with some more functionality, ie a HOC
+// higher order component
+
+// This is actually a container, a higher order component, is a 'wrapped component' because it is
 //   return {
 //     name: 'motley'
 //   }

@@ -264,9 +264,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 26: Monday June 11, 2018
 
-Today's Progress: 
+Today's Progress: Reducers and actions in zookeeper app.
 
-Thoughts: 
+Thoughts: Good, have to keep repeating bits, and checking where my state is etc.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
