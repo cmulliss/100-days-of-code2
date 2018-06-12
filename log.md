@@ -261,12 +261,163 @@ Thoughts: Good, but more confusing.
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
+
 100 Days Of Code - Log
 Day 26: Monday June 11, 2018
 
-Today's Progress: Reducers and actions in zookeeper app.
+Today's Progress: Reducers in zookeeper app.
 
 Thoughts: Good, have to keep repeating bits, and checking where my state is etc.
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 27: Tuesday June 12, 2018
+
+Today's Progress: Reducers in zookeeper app.
+
+Thoughts: Good, have to keep repeating bits, and checking where my state is etc.
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 28: Wednesday June 13, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 29: Thursday June 14, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 30: Friday June 15, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 31: Saturday June 16, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 32: Sunday June 17, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 33: Monday June 18, 2018
+
+Today's Progress: 
+
+Thoughts: G
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 34: Tuesday June 19, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 35: Wednesday June 20, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 36: Thursday June 21, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 37: Friday June 22, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 38: Saturday June 23, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 39: Sunday June 24, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 40: Monday June 25, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 41: Tuesday June 26, 2018
+
+Today's Progress: 
+
+Thoughts: 
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
