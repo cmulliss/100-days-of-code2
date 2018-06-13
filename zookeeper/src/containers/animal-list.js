@@ -1,26 +1,25 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-import selectAnAnimal from '../actions/'
+import { selectAnAnimal } from '../actions/index'
+
+// we are inside map, and 'this' points to animal, and we are calling the props, so we are calling the action which is imported
 
 class AnimalList extends Component {
   // ------fn to render animalsList
   renderAnimalsList () {
     let counter = 0
     return this.props.animals.map(animal => {
-      console.log('render animalList: ', animal)
       return (
         <li
           onClick={() => {
-            console.log('you clicked the <li>')
+            this.props.selectAnimal(animal)
           }}
           className='list-group-item'
           key={counter++}
         >
-          <p>
-            Species: {animal.species} <br />Name: {animal.name}
-          </p>
+          <p>Name: {animal.name}</p>
         </li>
       )
     })
@@ -28,7 +27,7 @@ class AnimalList extends Component {
 
   // ------
   render () {
-    console.log('animalList: ', this)
+    // console.log('animalList: ', this)
 
     return <ul className='list-group'>{this.renderAnimalsList()}</ul>
   }
@@ -36,17 +35,27 @@ class AnimalList extends Component {
 
 function mapStateToProps (state) {
   return {
-    animals: state.animals
+    animals: state.animals,
+    selectedAnimal: state.selectedAnimal
   }
 }
-
+// calling selectAnimal, is bound to the props, comes from the actions, using it onClick, and after click is done it flows from the action to the reducer, then to the store.
 function mapDispatchToProps (dispatch) {
-  return bindActionCreators({
-    selectAnAnimal
-  })
+  return bindActionCreators(
+    {
+      selectAnimal: selectAnAnimal
+    },
+    dispatch
+  )
 }
 
-export default connect(mapStateToProps)(AnimalList)
+export default connect(mapStateToProps, mapDispatchToProps)(AnimalList)
+
+// console.log('render animalList: ', animal)
+// selectAnimal is the fn bound to the props and bound to the scope of the specific clicked animal. The fn wants an animal
+
+// binding selectAnimal (L) fn as appears inside component, how you bind it to the props
+// to (R), selectAnAnimal, the action we have bound to this, how it comes from the actions
 
 // a wrapped component because it's wrapped inside the connect method
 // and provided with some more functionality, ie a HOC

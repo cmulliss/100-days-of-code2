@@ -285,9 +285,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 28: Wednesday June 13, 2018
 
-Today's Progress: 
+Today's Progress: Actions in zookeeper app.
 
-Thoughts: 
+Thoughts: Oops, getting a bit bogged down again. Go over this again tomorrow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

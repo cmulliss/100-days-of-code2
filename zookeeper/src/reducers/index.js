@@ -1,13 +1,16 @@
 import { combineReducers } from 'redux'
 
 import animalReducer from './animal-reducer'
+import selectedAnimalReducer from './selected-animal-reducer'
 
 const rootReducer = combineReducers({
-  // state: (state = () => state),
-  animals: animalReducer
+  animals: animalReducer,
+  selectedAnimal: selectedAnimalReducer
 })
 
 export default rootReducer
+
+// in rootReducer, need to bind to the global store
 
 // state returning an empty object to start
 
