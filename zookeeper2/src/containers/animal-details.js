@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { bindActionCreators } from 'redux'
 
 class AnimalDetails extends Component {
   render () {
-    console.log('details', this)
-    console.log('this.props', this.props)
+   // console.log('details', this)
+    //console.log('this.props', this.props)
 
     if (!this.props.selectedAnimal) {
       return <div>...</div>

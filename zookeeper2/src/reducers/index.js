@@ -2,10 +2,13 @@ import { combineReducers } from 'redux'
 
 import animalReducer from './animal-reducer'
 import selectedAnimalReducer from './selected-animal-reducer'
+import fetchAnimalsReducer from './fetch-animals-reducer'
 
 const rootReducer = combineReducers({
+  // state : ( state = {} ) => state
   animals: animalReducer,
-  selectedAnimal: selectedAnimalReducer
+  selectedAnimal: selectedAnimalReducer,
+  animalList: fetchAnimalsReducer
 })
 
 export default rootReducer

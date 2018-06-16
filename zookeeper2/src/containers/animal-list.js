@@ -2,12 +2,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { selectAnAnimal } from '../actions/index'
+import { selectAnAnimal, getAnimalsList } from '../actions/index'
 
 // we are inside map, and 'this' points to animal, and we are calling the props, so we are calling the action which is imported
 
 class AnimalList extends Component {
-  // ------fn to render animalsList
+  // ------- lifecycle method
+  componentWillMount () {
+    console.log('component will mount')
+  }
+  componentDidMount () {
+    console.log('component did mount')
+  }
+
+  // ------fn to render animalsList, own method
   renderAnimalsList () {
     let counter = 0
     return this.props.animals.map(animal => {
@@ -27,9 +35,20 @@ class AnimalList extends Component {
 
   // ------
   render () {
-    // console.log('animalList: ', this)
-
-    return <ul className='list-group'>{this.renderAnimalsList()}</ul>
+    console.log('render')
+    return (
+      <ul className='list-group'>
+        {this.renderAnimalsList()}
+        <button
+          onClick={() => {
+            this.props.getAnimalList()
+          }}
+          className='btn btn-success'
+        >
+          Click me to fetch the server
+        </button>
+      </ul>
+    )
   }
 }
 
@@ -43,13 +62,22 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return bindActionCreators(
     {
-      selectAnimal: selectAnAnimal
+      selectAnimal: selectAnAnimal,
+      getAnimalList: getAnimalsList
     },
     dispatch
   )
 }
 // the order counts, first mapStateToProps, second mapDispatchToProps
-export default connect(mapStateToProps, mapDispatchToProps)(AnimalList)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AnimalList)
+
+// constructor
+// lifecycle
+// own method
+// react render
 
 // console.log('render animalList: ', animal)
 // selectAnimal is the fn bound to the props and bound to the scope of the specific clicked animal. The fn wants an animal
