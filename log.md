@@ -325,9 +325,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 32: Sunday June 17, 2018
 
-Today's Progress: 
+Today's Progress: Creating a form with state bound to the elements.
 
-Thoughts: 
+Thoughts: Still interesting, but also still a bit confused at times. Understanding more all the time, just not as much as I would like.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
