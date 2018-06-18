@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import * as _ from 'lodash'
 
-import { selectAnimal, getAnimalsList } from '../actions/index'
+// import my actions
+import {
+  selectAnimal,
+  getAnimalsList,
+  deleteAnimalById
+} from '../actions/index'
 
 class AnimalList extends Component {
-  // constructor
-  // -------------------------------
-  //   constructor () {
-  //     super()
-  //   }
-
   // lifecycle methods
   // -------------------------------
 
@@ -23,7 +23,11 @@ class AnimalList extends Component {
 
   renderAnimalsList () {
     let counter = 0
-    return this.props.animalList.map(animal => {
+    // syntax: what am I mapping over, 2nd argument animal
+    // returning a loadash object, as ordinary map cannot map
+    // over objects. Store updates now, so shows immediately on list
+    return _.map(this.props.animalList, animal => {
+      // return this.props.animalList.map(animal => {
       counter = counter + 1
       return (
         <li
@@ -34,9 +38,23 @@ class AnimalList extends Component {
           className='list-group-item'
         >
           <p>Name : {animal.name}</p>
+          <button
+            onClick={() => {
+              this.onDeleteButtonClick(animal.id)
+            }}
+            className='btn btn-warning'
+          >
+            delete
+          </button>
         </li>
       )
     })
+  }
+  // inside the iterator, so animal.id
+  onDeleteButtonClick (id) {
+    // console.log('deleted id', id)
+    // id like to use deleteAnimalById(id)
+    this.props.deleteAnimal(id)
   }
 
   // react render
@@ -65,7 +83,8 @@ function mapDispatchToProps (dispatch) {
   return bindActionCreators(
     {
       selectAnimal: selectAnimal,
-      getAnimalList: getAnimalsList
+      getAnimalList: getAnimalsList,
+      deleteAnimal: deleteAnimalById
     },
     dispatch
   )
