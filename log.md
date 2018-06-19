@@ -295,9 +295,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 29: Thursday June 14, 2018
 
-Today's Progress: 
+Today's Progress: using ajax and local data file
 
-Thoughts: 
+Thoughts: Interesting
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -305,9 +305,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 30: Friday June 15, 2018
 
-Today's Progress: 
+Today's Progress: Using faker.js to generate large number of objects in data file
 
-Thoughts: 
+Thoughts: Interesting again! On to axios tomorrow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -315,9 +315,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 31: Saturday June 16, 2018
 
-Today's Progress: 
+Today's Progress: Using axios and thunk middleware, also lots of checking things out in the console.
 
-Thoughts: 
+Thoughts: Learning a lot, all the console explanations are really interesting.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -325,9 +325,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 32: Sunday June 17, 2018
 
-Today's Progress: 
+Today's Progress: Creating a form with state bound to the elements.
 
-Thoughts: 
+Thoughts: Still interesting, but also still a bit confused at times. Understanding more all the time, just not as much as I would like.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -335,9 +335,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 33: Monday June 18, 2018
 
-Today's Progress: 
+Today's Progress: Completed zookeeper tutorial
 
-Thoughts: G
+Thoughts: Really learn't a lot, but still not fully grasping redux. Will continue with other tutorials.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -345,9 +345,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 34: Tuesday June 19, 2018
 
-Today's Progress: 
+Today's Progress: Started another redux tutorial, Complete React Fullstack, but doing the redux section.
 
-Thoughts: 
+Thoughts: Going well, hope to consolidate my understanding.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
