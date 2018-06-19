@@ -335,9 +335,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 33: Monday June 18, 2018
 
-Today's Progress: 
+Today's Progress: Completed zookeeper tutorial
 
-Thoughts: G
+Thoughts: Really learn't a lot, but still not fully grasping redux. Will continue with other tutorials.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
