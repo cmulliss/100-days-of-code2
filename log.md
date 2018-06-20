@@ -355,9 +355,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 35: Wednesday June 20, 2018
 
-Today's Progress: 
+Today's Progress: A lot of redux, reducers, actions and so on. Made a lot of notes, and going over this until it makes sense.
 
-Thoughts: 
+Thoughts: Spent all my free time on this, had to stop when it stopped making sense.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
