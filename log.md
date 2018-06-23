@@ -365,9 +365,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 36: Thursday June 21, 2018
 
-Today's Progress: 
+Today's Progress: More redux.
 
-Thoughts: 
+Thoughts: Just keeping going.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -375,9 +375,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 37: Friday June 22, 2018
 
-Today's Progress: 
+Today's Progress: And even more redux.
 
-Thoughts: 
+Thoughts: Still going.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -385,9 +385,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 38: Saturday June 23, 2018
 
-Today's Progress: 
+Today's Progress: Completed another redux tutorial.
 
-Thoughts: 
+Thoughts: Still going.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
