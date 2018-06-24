@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-
 import { selectBook } from '../actions/index'
+import { bindActionCreators } from 'redux'
 
 class BookList extends Component {
   renderList () {
     return this.props.books.map(book => {
       return (
-        <li key={book.title} className='list-group-item'>
+        <li
+          key={book.id}
+          onClick={() => this.props.selectBook(book)}
+          className='list-group-item'
+        >
           {book.title}
         </li>
       )
@@ -16,32 +19,37 @@ class BookList extends Component {
   }
 
   render () {
-    return (
-      <div>
-        <ul className='list-group col-sm-4'>{this.renderList}</ul>
-      </div>
-    )
+    console.log('this.props', this.props)
+    return <ul className='list-group col-sm-4'>{this.renderList()}</ul>
   }
 }
 
 function mapStateToProps (state) {
+  // Whatever is returned will show up as props
+  // inside of BookList
   return {
     books: state.books
   }
 }
+
+// Anything returned from this function will end up as props
+// on the BookList container
 function mapDispatchToProps (dispatch) {
-  return bindActionCreators(
-    {
-      selectBook: selectBook
-    },
-    dispatch
-  )
+  // Whenever selectBook is called, the result shoudl be passed
+  // to all of our reducers
+  return bindActionCreators({ selectBook: selectBook }, dispatch)
 }
-// this promotes it to a container
+
+// Promote BookList from a component to a container - it needs to know
+// about this new dispatch method, selectBook. Make it available
+// as a prop.
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(BookList)
+// whatever is returned wil show up as props
+// inside of BookList, returning object that
+// that will be set = to this.props (above)
 
 // purpose, to render a list of books
 // list building by renderList fn
@@ -49,6 +57,7 @@ export default connect(
 // calls a helper fn, renderList
 // this.renderList is going to map over an array of books
 // for each book in the array create an li containing the book's title
+// need to get our app state in here, as this.props.books
 // want to plug in app state, need react-redux, connect
 // promote to container (or smart component)
 // has a direct connection to the state managed by redux

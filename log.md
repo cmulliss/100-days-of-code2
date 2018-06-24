@@ -395,9 +395,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 39: Sunday June 24, 2018
 
-Today's Progress: 
+Today's Progress: Revision of redux concepts.
 
-Thoughts: 
+Thoughts: Doing best to stay positive.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
