@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // turns component into a container
 import { connect } from 'react-redux'
+// import the action creator selectBook
 import { selectBook } from '../actions/index'
 // enables binding of actionCreators
 // binding the selectBook action to the BookList
@@ -34,6 +35,8 @@ function mapStateToProps (state) {
   // Whatever is returned will show up as props
   // inside of BookList, our books reducer is
   // returning our array of books, of objects
+  // whenever selectBook is called, the result
+  // should be passed to all our reducers
   return {
     books: state.books
   }
@@ -42,10 +45,16 @@ function mapStateToProps (state) {
 // on the BookList container
 // Whenever selectBook is called, the result should be passed
 // to all of our reducers
+// returning bindActionCreators and passing it an object
+// with a key of selectBook and a value of selectBook
+// the 'value' is the actual action creator
+// second argument is dispatch
+// then add mapDispatchToProps as second argument in connect
 function mapDispatchToProps (dispatch) {
   return bindActionCreators({ selectBook: selectBook }, dispatch)
 }
-
+// anything returned from this, mapDispatchToProps,
+// fn will end up as props on the BookList container
 // Promote BookList from a component to a container -
 // it needs to know about this new dispatch method,
 // selectBook. Make it available as a prop.

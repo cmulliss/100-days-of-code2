@@ -405,9 +405,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 40: Monday June 25, 2018
 
-Today's Progress: 
+Today's Progress: Continuing Stephen Grider React Redux tutorial. Actions etc today.
 
-Thoughts: 
+Thoughts: Will go over this again tomorrow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -415,7 +415,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 41: Tuesday June 26, 2018
 
-Today's Progress: 
+Today's Progress: Going over actions etc again, will do this again tomorrow too.
 
 Thoughts: 
 
