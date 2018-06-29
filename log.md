@@ -422,3 +422,253 @@ Thoughts:
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
+100 Days Of Code - Log
+Day 42: Tuesday June 26, 2018
+
+Today's Progress: Going over actions etc again, will do this again tomorrow too.
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 43: Tuesday June 26, 2018
+
+Today's Progress: Going over actions etc again, will do this again tomorrow too.
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 44: Tuesday June 26, 2018
+
+Today's Progress: Going over actions etc again, will do this again tomorrow too.
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 45: Tuesday June 26, 2018
+
+Today's Progress: Going over actions etc again, will do this again tomorrow too.
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 46: Tuesday June 26, 2018
+
+Today's Progress: Going over actions etc again, will do this again tomorrow too.
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 47: Tuesday June 26, 2018
+
+Today's Progress: Going over actions etc again, will do this again tomorrow too.
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 48: Tuesday June 26, 2018
+
+Today's Progress: Going over actions etc again, will do this again tomorrow too.
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 49: Wednesday June 27, 2018
+
+Today's Progress: Out all day, so will add another day on end.
+
+Thoughts: Enjoying the amazingly good weather!
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 50: Thursday June 28, 2018
+
+Today's Progress: Out all day again, so will add another day on end.
+
+Thoughts: Still enjoying the weather.
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 51: Friday June 29, 2018
+
+Today's Progress: Completed the 'book' redux react tutorial by Stephen Grider.
+
+Thoughts: Definitely beginning to remember and understand redux better.
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 52: Saturday June 30, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 53: Sunday July 1, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 54: Monday July 2, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 55: Tuesday July 3, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 56: Wednesday July 4, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 57: Friday July 5, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 58: Saturday July 6, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 59: Sunday July 7, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 60: Monday July 8, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 61: Tuesday July 9, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 62: Wednesday July 10, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 63: Thursday July 11, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 64: Friday July 12, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 65: Saturday July 13, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 66: Sunday July 14, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----

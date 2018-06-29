@@ -7,7 +7,7 @@ import { selectBook } from '../actions/index'
 // binding the selectBook action to the BookList
 // makes sure action flows through all reducers
 import { bindActionCreators } from 'redux'
-
+// adding our click event handler to the li
 class BookList extends Component {
   renderList () {
     return this.props.books.map(book => {
@@ -41,8 +41,8 @@ function mapStateToProps (state) {
     books: state.books
   }
 }
-// Anything returned from this function will end up as props
-// on the BookList container
+// Anything returned from this (mapDispatchToProps)
+// function will end up as props on the BookList container
 // Whenever selectBook is called, the result should be passed
 // to all of our reducers
 // returning bindActionCreators and passing it an object
@@ -55,6 +55,7 @@ function mapDispatchToProps (dispatch) {
 }
 // anything returned from this, mapDispatchToProps,
 // fn will end up as props on the BookList container
+// this.props.selectBook will call our action creator
 // Promote BookList from a component to a container -
 // it needs to know about this new dispatch method,
 // selectBook. Make it available as a prop.
