@@ -525,9 +525,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 52: Saturday June 30, 2018
 
-Today's Progress: 
+Today's Progress: Started the weather app redux tutorial by Stephen Grider. 
 
-Thoughts: 
+Thoughts: So much easier second time around.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
