@@ -535,9 +535,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 53: Sunday July 1, 2018
 
-Today's Progress: 
+Today's Progress: Doing well with axios and promises. 
 
-Thoughts: 
+Thoughts: Brilliant tutorial! Second time through and understanding more.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
