@@ -106,7 +106,7 @@ Day 10: Saturday May 26, 2018
 
 Today's Progress: Completed es6 section of the tutorial.
 
-Thoughts: Brilliant tuorial, best explanation of the spread operator ever!
+Thoughts: Brilliant tutorial, best explanation of the spread operator ever!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -545,9 +545,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 54: Monday July 2, 2018
 
-Today's Progress: 
+Today's Progress: Still going with redux
 
-Thoughts: 
+Thoughts: Just need to keep going
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -555,9 +555,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 55: Tuesday July 3, 2018
 
-Today's Progress: 
+Today's Progress: Day out, so no coding today.
 
-Thoughts: 
+Thoughts: Will add another day to end.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -565,9 +565,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 56: Wednesday July 4, 2018
 
-Today's Progress: 
+Today's Progress: Debugging code from tutorial, got it working again.
 
-Thoughts: 
+Thoughts: Error messages seem to cascade some times.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -575,9 +575,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 57: Friday July 5, 2018
 
-Today's Progress: 
+Today's Progress: More progress with redux.
 
-Thoughts: 
+Thoughts: Very slow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -585,9 +585,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 58: Saturday July 6, 2018
 
-Today's Progress: 
+Today's Progress: Seriously messed up with code, so going to revert back to point where it still worked.
 
-Thoughts: 
+Thoughts: Guess this is a good way to learn.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -595,9 +595,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 59: Sunday July 7, 2018
 
-Today's Progress: 
+Today's Progress: Weather app still having some issues, so trying to work out why.
 
-Thoughts: 
+Thoughts: Determined to sort this out.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -605,9 +605,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 60: Monday July 8, 2018
 
-Today's Progress: 
+Today's Progress: Weather app not yet complete, but problems sorted out.
 
-Thoughts: 
+Thoughts: Persistence pays off. Do learn a lot troubleshooting errors.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
