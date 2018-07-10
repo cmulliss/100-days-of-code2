@@ -615,9 +615,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 61: Tuesday July 9, 2018
 
-Today's Progress: 
+Today's Progress: Started google maps integration, tutorial not using API key, but seemed to need it, so signed up for one.
 
-Thoughts: 
+Thoughts: Driven mad trying to get this to work, but after a short break started getting somewhere.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
