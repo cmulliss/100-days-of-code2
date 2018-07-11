@@ -625,9 +625,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 62: Wednesday July 10, 2018
 
-Today's Progress: 
+Today's Progress: Correcting for serial error messages, finally got maps to show on weather app.
 
-Thoughts: 
+Thoughts: Integrating google map api into react is a major challenge. Very satisfying when it does eventually work.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
