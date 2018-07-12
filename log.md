@@ -635,9 +635,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 63: Thursday July 11, 2018
 
-Today's Progress: 
+Today's Progress: Completed the weather app tutorial.
 
-Thoughts: 
+Thoughts: Redux router and form to follow, then will look at server side.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
