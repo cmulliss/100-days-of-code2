@@ -559,7 +559,7 @@ Today's Progress: Day out, so no coding today.
 
 Thoughts: Will add another day to end.
 
-Link to work: <https://github.com/cmulliss/100-days-of-code2>
+Link to work: <https://github.com/cmulliss/100-days-of-code2
 
 ----
 100 Days Of Code - Log
@@ -573,7 +573,18 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 57: Friday July 5, 2018
+Day 56: Thursday July 5, 2018
+
+Today's Progress: Out all day.
+
+Thoughts: Will add another day to end.
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+
+100 Days Of Code - Log
+Day 57: Friday July 6, 2018
 
 Today's Progress: More progress with redux.
 
@@ -583,7 +594,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 58: Saturday July 6, 2018
+Day 58: Saturday July 7, 2018
 
 Today's Progress: Seriously messed up with code, so going to revert back to point where it still worked.
 
@@ -593,7 +604,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 59: Sunday July 7, 2018
+Day 59: Sunday July 8, 2018
 
 Today's Progress: Weather app still having some issues, so trying to work out why.
 
@@ -603,7 +614,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 60: Monday July 8, 2018
+Day 60: Monday July 9, 2018
 
 Today's Progress: Weather app not yet complete, but problems sorted out.
 
@@ -613,7 +624,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 61: Tuesday July 9, 2018
+Day 61: Tuesday July 10, 2018
 
 Today's Progress: Started google maps integration, tutorial not using API key, but seemed to need it, so signed up for one.
 
@@ -623,7 +634,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 62: Wednesday July 10, 2018
+Day 62: Wednesday July 11, 2018
 
 Today's Progress: Correcting for serial error messages, finally got maps to show on weather app.
 
@@ -633,7 +644,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 63: Thursday July 11, 2018
+Day 63: Thursday July 12, 2018
 
 Today's Progress: Completed the weather app tutorial.
 
@@ -643,11 +654,11 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 64: Friday July 12, 2018
+Day 64: Friday July 13, 2018
 
-Today's Progress: 
+Today's Progress: Started react router 4 and server based api to read and write. Using Postman for http request.
 
-Thoughts: 
+Thoughts: This is fun!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
