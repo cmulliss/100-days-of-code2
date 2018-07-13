@@ -16,5 +16,8 @@
 * can use id to view or delete that post
 * can view all posts too
 
+## React Router 4
+* For v4 of React Router use:
 * npm install --save react-router-dom@4.2.2
+
 
