@@ -664,11 +664,11 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 65: Saturday July 13, 2018
+Day 65: Saturday July 14, 2018
 
-Today's Progress: 
+Today's Progress: Continuing with action creator and beginning of reducer.
 
-Thoughts: 
+Thoughts: Plodding on.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
