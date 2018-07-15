@@ -45,4 +45,9 @@
 1. will take an array of records
 2. take one property out of each record
 3. and create an object out of that
+
+### wire up action creator to component
+
+* wire up FETCH_POSTS action creator to the posts-index component
+* so import our action creator and the connect helper
 * 

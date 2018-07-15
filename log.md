@@ -676,9 +676,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 66: Sunday July 14, 2018
 
-Today's Progress: 
+Today's Progress: connecting our container, but using action creator shortcut.
 
-Thoughts: 
+Thoughts: Will need to go over this again!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
