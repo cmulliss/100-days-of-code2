@@ -674,7 +674,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 66: Sunday July 14, 2018
+Day 66: Sunday July 15, 2018
 
 Today's Progress: connecting our container, but using action creator shortcut.
 
@@ -683,3 +683,153 @@ Thoughts: Will need to go over this again!
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
+100 Days Of Code - Log
+Day 67: Monday July 16, 2018
+
+Today's Progress: Fixed another error message, due to missing letter s, than another due to wrong brackets. Continued with tutorial.
+
+Thoughts: Seem to spend a lot of time debugging!
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 68: Tuesday July 17, 2018
+
+Today's Progress:
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 69: Wednesday July 18, 2018
+
+Today's Progress: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 70: Thursday July 19, 2018
+
+Today's Progress:
+
+Thoughts:
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 71: Friday July 20, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+
+100 Days Of Code - Log
+Day 72: Saturday July 21, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 73: Sunday July 22, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 74: Monday July 23, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 7: day July 2, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 7: day July 2, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 7: day July 2, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 7: day July 2, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 7: day July 2, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 7: day July 2, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 7: day July 2, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+

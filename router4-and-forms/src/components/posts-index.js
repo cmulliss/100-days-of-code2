@@ -1,24 +1,25 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import _ from 'lodash'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-import { fetchPosts } from "../actions";
+import { fetchPosts } from '../actions'
 
 class PostsIndex extends Component {
   // doesn't make much difference calling the action creator
   // before or after compoent renders on screen
-  //because fetching our data is an synchonous operation
-  componentDidMount() {
-    this.props.fetchPosts();
+  // because fetching our data is an synchonous operation
+  componentDidMount () {
+    this.props.fetchPosts()
   }
 
-  render() {
-    return <div>Posts Index</div>;
+  render () {
+    return <div>Posts Index</div>
   }
 }
 export default connect(
   null,
-  (fetchPosts: fetchPosts)
-)(PostIndex);
+  { fetchPosts: fetchPosts }
+)(PostsIndex)
 // state as an object
 // the url the user visits is actually a critical piece of app state
 // would make more sense to store our list of posts inside an object, instead of an array

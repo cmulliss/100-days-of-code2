@@ -48,6 +48,32 @@
 
 ### wire up action creator to component
 
-* wire up FETCH_POSTS action creator to the posts-index component
+* now have got our FETCH_POSTS action creator put together
+* and have got out reducer hooked up to it, for the FETCH_POSTS action, need to:
+* wire up FETCH_POSTS action creator to the posts-index.js component
 * so import our action creator and the connect helper
+* wire up connect helper at the bottom
+* previously, have made use of the connect helper by defining the mapDispatchToProps function
+* have done this whenever we wanted to get an action creator directly into a component, 
+* so we can call it off the props object
+
+### there is another way to wire up the action creator
+
+* more of a shortcut
+* so rather than defining a separate function, 
+* for defining exactly how the action creator is going to be hooked up
+* we are first going to define our mapStateToProps argument of null,
+* because we are not passing mapStateToProps
+* the second argument, rather than passing in that extra function, we are just going to pass in the action creator itself, inside of an object
+
+```javascript
+export default connect(  null, { fetchPosts: fetchPosts }
+)(PostsIndex)
+```
+* we still have access to this.props.fetchPosts inside of the component
+* (there are times when you would want to use a separate function, eg if you want to do some computation on exactly how you want to call the action creator ahead of time)
+
+### when are we going to call the action creator?
+
+* when are we going to attempt to reach out to the API and fetch our list of posts?
 * 

@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 import { FETCH_POSTS } from '../actions'
 
 // will receive previous state and an action
@@ -5,9 +7,10 @@ import { FETCH_POSTS } from '../actions'
 export default function (state = {}, action) {
   switch (action.type) {
     case FETCH_POSTS:
-      return _.mapKeys(action.payload.date, 'id')
-      console.log(action.payload.data) // [post1, post2]
-    // {4: post}
+      console.log('initial list of posts', action.payload.data) // [post1, post2]
+      // {4: post}
+      return _.mapKeys(action.payload.data, 'id')
+
     default:
       return state
   }
