@@ -1,23 +1,49 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { fetchPosts } from '../actions'
 
 class PostsIndex extends Component {
-  // doesn't make much difference calling the action creator
-  // before or after compoent renders on screen
-  // because fetching our data is an synchonous operation
   componentDidMount () {
     this.props.fetchPosts()
   }
-
+  renderPosts () {
+    // this is an object, so not got built in map
+    // use lodash instead, ability to deal with objects
+    return _.map(this.props.posts, post => {
+      return (
+        <li className='list-group-item' key={post.id}>
+          {post.title}
+        </li>
+      )
+    })
+  }
+  // want list of posts inside this component
+  // so set up helper fn to render list of posts
   render () {
-    return <div>Posts Index</div>
+    // console.log('this.props.posts', this.props.posts)
+    return (
+      <div>
+        <div className='text-xs-right'>
+          <Link className='btn btn-primary' to='/posts/new'>
+            Add a post
+          </Link>
+        </div>
+        <h3>Posts</h3>
+        <ul className='list-group'>{this.renderPosts()}</ul>
+      </div>
+    )
   }
 }
+function mapStateToProps (state) {
+  return { posts: state.posts }
+}
+// whenever we want to consume anything, from app level
+// state, define mapStateToProps fn, the first argument to connect, so change from null
 export default connect(
-  null,
+  mapStateToProps,
   { fetchPosts: fetchPosts }
 )(PostsIndex)
 // state as an object
@@ -38,3 +64,6 @@ export default connect(
 // fetch this list of posts by calling the action creator
 // right now our particular key doesn't have any posts associated with it, so we got back an empty array
 //
+// doesn't make much difference calling the action creator
+// before or after compoent renders on screen
+// because fetching our data is an asynchonous operation

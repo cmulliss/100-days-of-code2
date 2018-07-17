@@ -76,4 +76,33 @@ export default connect(  null, { fetchPosts: fetchPosts }
 ### when are we going to call the action creator?
 
 * when are we going to attempt to reach out to the API and fetch our list of posts?
+* previously, we have fetched data after an event occurs, hover or click for example
+* in this case, telling component to go fetch some data as soon as it is about to be rendered
+* as soon as is about to be rendered on screen, we want to reach out to our API and fetch this list of posts, by calling the action creator
+* will use a lifecycle method to do this, componentDidMount
+* doesn't make much difference calling the action creator
+* before or after compoent renders on screen
+* because fetching our data is an asynchonous operation
+* it takes time to fetch some data and have it returned to our browser, and react does not have any concept of figuring out how to not render the component until after we do some pre-loading operation
+* react will always try to load itself as soon as it can
+* can see request on 'network' tab
+* testing in Postman:
+http://reduxblog.herokuapp.com/api/posts/?key=PAPERCLIP1234
+    {
+    "id": 259116,
+    "title": "hey bb",
+    "categories": "asdf",
+    "content": "new content"
+}
+* last thing we need to do is go back to component
+* hook that component up to component level state
+* or some app level state 
+* and render our list of posts inside the browser
+
+## Redux Form
+
+* npm i --save redux-form
+* we then have to import a reducer from the redux-form library and hook it up to our combineReducers call
+* so, internally, redux-form uses our redux instance, or our instance of the redux store for handling all the state that is being produced by the form, like the actual form that is getting rendered on the screen
+* redux-form is saving us from having to wire up a bunch of manual action creators
 * 

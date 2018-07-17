@@ -696,9 +696,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 68: Tuesday July 17, 2018
 
-Today's Progress:
+Today's Progress: Continuing with blog tutorial. Routing and redux-form.
 
-Thoughts: 
+Thoughts: Redux Form is interesting as you hook it up to the combineReducers call to handle all the state produced by the form, thus saving having to wire up a lot of manual action creators.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
