@@ -706,7 +706,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 69: Wednesday July 18, 2018
 
-Today's Progress: 
+Today's Progress: Creating the form. 
+
+Thoughts: Complex, will need more than one go at this.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
