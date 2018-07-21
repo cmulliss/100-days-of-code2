@@ -716,9 +716,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 70: Thursday July 19, 2018
 
-Today's Progress:
+Today's Progress: More redux form
 
-Thoughts:
+Thoughts: Really like this!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -726,9 +726,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 71: Friday July 20, 2018
 
-Today's Progress: 
+Today's Progress: Stil working on redux form. Validation etc.
 
-Thoughts: 
+Thoughts: Really clever, but somewhat complicated.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -737,13 +737,14 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 72: Saturday July 21, 2018
 
-Today's Progress: 
+Today's Progress: Almost finished redux form.
 
-Thoughts: 
+Thoughts: Definitely like redux form.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
+
 100 Days Of Code - Log
 Day 73: Sunday July 22, 2018
 
@@ -765,7 +766,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 7: day July 2, 2018
+Day 75: Tuesday July 24, 2018
 
 Today's Progress: 
 
@@ -775,7 +776,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 7: day July 2, 2018
+Day 76: Wednesday July 25, 2018
 
 Today's Progress: 
 
@@ -785,7 +786,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 7: day July 2, 2018
+Day 77: Thursday July 26, 2018
 
 Today's Progress: 
 
@@ -795,7 +796,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 7: day July 2, 2018
+Day 78: Friday July 27, 2018
 
 Today's Progress: 
 
@@ -805,7 +806,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 7: day July 2, 2018
+Day 79: Saturday July 28, 2018
 
 Today's Progress: 
 
@@ -815,7 +816,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 7: day July 2, 2018
+Day 80: Sunday July 29, 2018
 
 Today's Progress: 
 
@@ -825,7 +826,17 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 7: day July 2, 2018
+Day 81: Monday July 30, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 82: Tuesday July 31, 2018
 
 Today's Progress: 
 
