@@ -748,9 +748,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 73: Sunday July 22, 2018
 
-Today's Progress: 
+Today's Progress: More Redux Form, including 'programmatic navigation.
 
-Thoughts: 
+Thoughts: There is a lot to this, will need at least another day or 2 to finish it.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

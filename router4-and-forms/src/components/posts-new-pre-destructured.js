@@ -7,37 +7,46 @@ import { createPost } from '../actions'
 // dont have to wire it up manually, just pass
 // the pre genreated event handlers via
 //         <input {...field.input} />
-
-// es6 destructuring, grab meta from field
-// could also destructure touched and error
-// properties off the meta object as well
-// these are nested properties
 class PostsNew extends Component {
   renderField (field) {
-    const {
-      meta: { touched, error }
-    } = field
-    const className = `form-group ${touched && error ? 'has-danger' : ''}`
-
+    const className = `form-group ${
+      field.meta.touched && field.meta.error ? 'has-danger' : ''
+    }`
     return (
-      <div className={className}>
+      <div className='form-group has danger'>
         <label>{field.label}</label>
         <input className='form-control' type='text' {...field.input} />
-        <div className='text-help'>{touched ? error : ''}</div>
+        <div className='text-help'>
+          {field.meta.touched ? field.meta.error : ''}
+        </div>
       </div>
     )
   }
-  // want to take our values object and post it up to our // API, within redux, want action creators for this
-  // want an action creator within onSubmit, which will
-  // be responsible for posting the post into the API
-  // will create our action creator, put our API request // inside it, then hook it up to our onSubmit fn.
+  // 2 meta properties, truthy falsey
+  // to show error messages, reference the 'field' object
+  // that is passed the renderField fn
+  // field object represents a single input, or piece of
+  // state we are attempting to communicate to the user
+  // meta.error automatically added to that field object from our validate fn.
+
+  // this.onSubmit is going to be a helper fn we
+  // define, gets called with an object we call 'values'
+  //
   onSubmit (values) {
-    this.props.history.push('/')
-    this.props.createPost(values)
     console.log(values)
   }
 
   render () {
+    // pulling a property off our props object,
+    // handleSubmit, coming off of this.props
+    // then pass this to handleSubmit, then as an
+    // argument to handleSubmit we pass
+    // this.onsubmit.bind(this)
+    // handleSubmit, from referencing props and
+    // pulling of handleSubmit property being passed
+    // to the component on behalf of redux form
+    // handles the redux-form side of things
+
     const { handleSubmit } = this.props
     // bind makes sure we still have access to our //component, onSubmit needs to involve some code
     // from redux-form and some code we write
@@ -57,9 +66,6 @@ class PostsNew extends Component {
         <button type='submit' className='btn btn-primary'>
           Submit
         </button>
-        <Link to='/' className='btn btn-danger'>
-          Cancel
-        </Link>
       </form>
     )
   }
@@ -81,27 +87,7 @@ function validate (values) {
 export default reduxForm({
   validate: validate,
   form: 'PostsNewForm'
-})(
-  connect(
-    null,
-    { createPost }
-  )(PostsNew)
-)
-// to handle programatic navigation, react router passes
-// in a big set of props on, or into, our component that
-// is being rendered by our route
-// whenever react-router renders a component it passes
-// in a whole lot of different helpers and objects for
-// helping with navigation to this component PostsNew
-// in this case. It therefore has access to props to
-// help with navigation. We want to make use of is
-// this.props.history, and more specifically,
-// history.push, if we call push with a route, see above,
-// we will automatically navigate back to our big list of
-// posts, because that's what exists at our root route
-
-// above using connect as well as reduxForm, to connect
-// the action creator createPost
+})(PostsNew)
 // our helper, that's going to allow reduxForm to
 // communicate directly from the component
 // to the reducers that we have already set up
@@ -137,24 +123,3 @@ export default reduxForm({
 // once it decides all ok, it then calls the fn we
 // defined and passes us the values out of the form
 // calling bind on this, because we are passing this.onSubmit as a callback fn, that will be executed in some different context outside our component
-
-// pulling a property off our props object,
-// handleSubmit, coming off of this.props
-// then pass this to handleSubmit, then as an
-// argument to handleSubmit we pass
-// this.onsubmit.bind(this)
-// handleSubmit, from referencing props and
-// pulling of handleSubmit property being passed
-// to the component on behalf of redux form
-// handles the redux-form side of things
-
-// 2 meta properties, truthy falsey
-// to show error messages, reference the 'field' object
-// that is passed the renderField fn
-// field object represents a single input, or piece of
-// state we are attempting to communicate to the user
-// meta.error automatically added to that field object from our validate fn.
-
-// this.onSubmit is going to be a helper fn we
-// define, gets called with an object we call 'values'
-//

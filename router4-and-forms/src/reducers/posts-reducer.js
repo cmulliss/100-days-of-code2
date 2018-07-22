@@ -20,3 +20,5 @@ export default function (state = {}, action) {
 // use lodash to create object from array
 // will give initial list of posts
 //
+// need to see what happens in the reducer when it
+// see an action of type createPost?
