@@ -8,7 +8,15 @@ import { FETCH_POST } from '../actions'
 export default function (state = {}, action) {
   switch (action.type) {
     case FETCH_POST:
-      return { ...state }
+      //   const post = action.payload.data
+      //   const newState = { ...state }
+      //   newState[post.id] = post
+      //   return newState
+      // using es6, [] are not creating an array,
+      // but doing key interpolation
+      // make a new key on this object using contents
+      // of [], and value = to action.payload.data
+      return { ...state, [action.payload.data.id]: action.payload.data }
     case FETCH_POSTS:
       console.log('initial list of posts', action.payload.data) // [post1, post2]
       // {4: post}
@@ -33,3 +41,7 @@ export default function (state = {}, action) {
 // put them into this new object we are about to return
 // and add a new key value pair, where the key will be
 // the id of the post we fetched and the value the post itself
+// remember, the posts that we fetch is available as an
+// action.payload.data because we are using axios
+// and the data that we care about is on the data property
+//

@@ -27,19 +27,7 @@ class PostsNew extends Component {
       </div>
     )
   }
-  // want to take our values object and post it up to our // API, within redux, want action creators for this
-  // want an action creator within onSubmit, which will
-  // be responsible for posting the post into the API
-  // will create our action creator, put our API request // inside it, then hook it up to our onSubmit fn.
 
-  // we do need to wait for our post to be created before
-  // we navigate back to posts list, we need to make sure
-  // it only gets called AFTER the post has been created
-  // we are going to pass a callback fn to this
-  // action creator, creatPost, and move the history.push
-  // call inside of that. Now the action creator has
-  // this fn, calls this fn, it will automatically nav
-  // back to our list of posts
   onSubmit (values) {
     this.props.createPost(values, () => {
       this.props.history.push('/')
@@ -97,6 +85,21 @@ export default reduxForm({
     { createPost }
   )(PostsNew)
 )
+
+// want to take our values object and post it up to our // API, within redux, want action creators for this
+// want an action creator within onSubmit, which will
+// be responsible for posting the post into the API
+// will create our action creator, put our API request // inside it, then hook it up to our onSubmit fn.
+
+// we do need to wait for our post to be created before
+// we navigate back to posts list, we need to make sure
+// it only gets called AFTER the post has been created
+// we are going to pass a callback fn to this
+// action creator, creatPost, and move the history.push
+// call inside of that. Now the action creator has
+// this fn, calls this fn, it will automatically nav
+// back to our list of posts
+
 // to handle programatic navigation, react router passes
 // in a big set of props on, or into, our component that
 // is being rendered by our route
