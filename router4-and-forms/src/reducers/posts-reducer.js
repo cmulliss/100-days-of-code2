@@ -1,11 +1,14 @@
 import _ from 'lodash'
 
 import { FETCH_POSTS } from '../actions'
+import { FETCH_POST } from '../actions'
 
 // will receive previous state and an action
 // default our state to an object for list of posts
 export default function (state = {}, action) {
   switch (action.type) {
+    case FETCH_POST:
+      return { ...state }
     case FETCH_POSTS:
       console.log('initial list of posts', action.payload.data) // [post1, post2]
       // {4: post}
@@ -22,3 +25,11 @@ export default function (state = {}, action) {
 //
 // need to see what happens in the reducer when it
 // see an action of type createPost?
+// adding case, want to retain all our existing app
+// level state, not lose it, so to maek sure we take
+// all the posts we've already fetched and include
+// them in here, we'll use ...state
+// take all existing posts out of state object and
+// put them into this new object we are about to return
+// and add a new key value pair, where the key will be
+// the id of the post we fetched and the value the post itself
