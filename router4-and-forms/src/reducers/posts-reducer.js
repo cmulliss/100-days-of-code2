@@ -2,20 +2,15 @@ import _ from 'lodash'
 
 import { FETCH_POSTS } from '../actions'
 import { FETCH_POST } from '../actions'
+import { DELETE_POST } from '../actions'
 
 // will receive previous state and an action
 // default our state to an object for list of posts
 export default function (state = {}, action) {
   switch (action.type) {
+    case DELETE_POST:
+      return _.omit(state, action.payload)
     case FETCH_POST:
-      //   const post = action.payload.data
-      //   const newState = { ...state }
-      //   newState[post.id] = post
-      //   return newState
-      // using es6, [] are not creating an array,
-      // but doing key interpolation
-      // make a new key on this object using contents
-      // of [], and value = to action.payload.data
       return { ...state, [action.payload.data.id]: action.payload.data }
     case FETCH_POSTS:
       console.log('initial list of posts', action.payload.data) // [post1, post2]
@@ -26,6 +21,18 @@ export default function (state = {}, action) {
       return state
   }
 }
+// need to remove deleted post from local state
+// import DELETE_POST type, the create another
+// case statement. Teh actions payload contains th
+// id of the deleted post, so we need to reach into
+// the state object and rid of key and value
+// use a helper, from lodash library, 'omit'
+// if state object had payload of deleted key
+// drop it and return state without it
+// does not modify existing state object
+// returns a new state object
+// benefit of using an object, rather than an []
+// for state management
 
 // import our type from actions/index.js
 // use lodash to create object from array
@@ -45,3 +52,11 @@ export default function (state = {}, action) {
 // action.payload.data because we are using axios
 // and the data that we care about is on the data property
 //
+//   const post = action.payload.data
+//   const newState = { ...state }
+//   newState[post.id] = post
+//   return newState
+// using es6, [] are not creating an array,
+// but doing key interpolation
+// make a new key on this object using contents
+// of [], and value = to action.payload.data

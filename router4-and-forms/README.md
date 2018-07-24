@@ -106,3 +106,24 @@ http://reduxblog.herokuapp.com/api/posts/?key=PAPERCLIP1234
 * so, internally, redux-form uses our redux instance, or our instance of the redux store for handling all the state that is being produced by the form, like the actual form that is getting rendered on the screen
 * redux-form is saving us from having to wire up a bunch of manual action creators
 * 
+### Summary
+* in index.js made use of Route etc to give our app the aspect of the idea of navigation
+* we created separate routes for each individual component inside our app, and we tied each of those component to a particular path
+* just hiding and showing different sets of react components
+* the route component takes a path, and that path can have wildcards in it, that we specified :id
+* made good use of this inside posts-show
+* const id = this.props.match.params
+* challenge, making use of react-router with action creators
+* best way, passing around callbacks to our action creators, that will take care of the navigation after the action creator has completed executing
+* made use of 'ownProps' system, with mapStateToProps
+* remember, the second argument with mapStateToProps is the set of props going to the target component
+* good place to do intermediate calculations etc
+* also see 'reselect' library for doing intermediate calculations inside of mapStateToProps
+* __finally, inside our reducer, we made use of _.mapKeys helper to treat our state object as an object rather than an array__
+* with an object we get some very fast and easy look up of records and it also makes maintaining fetching the same record repeatedly much more straightforward
+* we were fetching an individual post, with the FETCH_POSTS case, easy to take all of our existing states adn then add in additional record to that object as well
+* return { ...state, [action.payload.data.id]:
+* easier than using an array, because this way a particular post just overwritten
+* __use an object for storage of your data in your state__
+* see bonus video
+

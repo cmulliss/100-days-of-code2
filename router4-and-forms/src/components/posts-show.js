@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { fetchPost } from '../actions'
+
+import { fetchPost, deletePost } from '../actions'
 // when do you want to call this action creator?
 // props provided by react router, params object
 // will contain all the different wildcard values
@@ -11,8 +12,21 @@ class PostsShow extends Component {
     const { id } = this.props.match.params
     this.props.fetchPost(id)
   }
+  // handler, using props, because deletePost is an
+  // action creator, and pass in id of post
+  // retrieve id as above
+  // wait for request to be completed, the nav
+  // back to list of posts, being passed as
+  // second argument to deletePost, do to action
+  // creator which will receive that callback
+
+  onDeleteClick () {
+    const { id } = this.props.match.params
+    this.props.deletePost(id, () => this.props.history.push('/'))
+  }
   // above, takes care of fetching an individual post
-  // with given id,
+  // with given id, next takes care of deleting post
+  // wire up deletePost to connect helper at bottom
 
   render () {
     const { post } = this.props
@@ -26,7 +40,12 @@ class PostsShow extends Component {
         <Link className='btn btn-primary' to='/'>
           Back To Index
         </Link>
-        <button className='btn btn-danger pull-xs-right'>Delete Post</button>
+        <button
+          className='btn btn-danger pull-xs-right'
+          onClick={this.onDeleteClick.bind(this)}
+        >
+          Delete Post
+        </button>
         <h3>{post.title}</h3>
         <h6>Categories: {post.categories}</h6>
         <p>{post.content}</p>
@@ -45,7 +64,7 @@ function mapStateToProps ({ posts }, ownProps) {
 
 export default connect(
   mapStateToProps,
-  { fetchPost }
+  { fetchPost, deletePost }
 )(PostsShow)
 // the compoent only really cares about one particular
 // post, so rather than passing the big list of posts
@@ -86,3 +105,5 @@ export default connect(
 // mapStateToProps function, will be called with the
 // state object, but only care about posts piece
 // of state property
+
+// best to use params as will always have id object
