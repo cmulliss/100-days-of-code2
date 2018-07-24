@@ -758,9 +758,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 74: Monday July 23, 2018
 
-Today's Progress: 
+Today's Progress: Stuck getting code to work, will continue tomorrow. Have learnt a lot though.
 
-Thoughts: 
+Thoughts: Really interesting, but a bit frustrating when code doesn't work
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -768,9 +768,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 75: Tuesday July 24, 2018
 
-Today's Progress: 
+Today's Progress: Code works today! Completed the tutorial, on to the next one.
 
-Thoughts: 
+Thoughts: Made lots of notes, really interesting about using objects not arrays to store state.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
