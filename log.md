@@ -778,9 +778,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 76: Wednesday July 25, 2018
 
-Today's Progress: 
+Today's Progress: Started 'server side rendering' react redux course. 
 
-Thoughts: 
+Thoughts: Filling in the blanks in my understanding of function of webpack, and using package.json to setup start scripts.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

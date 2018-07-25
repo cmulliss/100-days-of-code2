@@ -8918,7 +8918,7 @@ app.get('/', function (req, res) {
 });
 
 app.listen(3000, function () {
-  console.log('Listening on prot 3000');
+  console.log('Listening on port 3000');
 });
 
 /***/ }),
@@ -28557,7 +28557,7 @@ var Home = function Home() {
   return _react2.default.createElement(
     'div',
     null,
-    'Home component'
+    'My Home component'
   );
 }; // es2015 style
 
