@@ -36,3 +36,36 @@
 * in a second run: npm run dev:build:server
 * making changes to Home.js rebuilds and restarts
 
+## Universal or Isomorphic js
+
+* we are using 2 different module systems in our project
+* index.js using common js module system, with require statements
+* Home.js using es2015 modules, distinctly different module system
+* working with isomorphich or universal (server side) app means we should be able to use exact same coding style on both client and server side
+* BUT, currently no es2015 module support with node
+* Babel and webpack can cope with this
+* because our server files are being handled by webpack, we can now make use of es2015 modules on our server side code as well
+* we want to do that to lessen the distinction between our server side code and client side code
+* we want to write the exact same dialect of js on both sides
+* so, refactor index.js
+
+## Client side js
+
+* our server side rendering pretty good, but one aspect not working as might be expected
+* when someone accesses our server on the root route, we send them back the html that is generated from the Home component
+
+```javascript
+pp.get('/', (req, res) => {
+  const content = renderToString(<Home />)
+```
+
+* so a slight problem with our server, if add more code to Home component will expose this
+* add button and event handler, no response on clicking button
+* normal React app, takes bundle.js, renders components to DOM, attaches event handler
+* but server side app, no js code being sent down to the users browser right now. Make request to root route, express server sends back the html from the Home component, and NOTHING else, no js
+* to get app to work, we need to ship down all the js code related to our app, after we ship down all the html which gives some initial content on the screen
+* step one, getting html on screen
+* step two, is to make sure we then load up our react app and have the react app set up all the event handlers, action creators and data loading requests etc
+* 
+
+
