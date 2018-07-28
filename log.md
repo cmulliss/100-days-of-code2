@@ -788,9 +788,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 77: Thursday July 26, 2018
 
-Today's Progress: 
+Today's Progress: Started setting up for Materialize tutorial
 
-Thoughts: 
+Thoughts: Really useful extra info in tutorial about using emmet.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -798,9 +798,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 78: Friday July 27, 2018
 
-Today's Progress: 
+Today's Progress: Bad headache so no coding today.
 
-Thoughts: 
+Thoughts: OK, will add another day to end.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -808,9 +808,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 79: Saturday July 28, 2018
 
-Today's Progress: 
+Today's Progress: More server side rendering today.
 
-Thoughts: 
+Thoughts: Brilliant tutorial.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

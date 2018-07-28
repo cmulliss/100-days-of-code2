@@ -8921,12 +8921,14 @@ var _Home2 = _interopRequireDefault(_Home);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// tell express to treat as public or static directory
 // const express = require('express')
 // const React = require('react')
 // const renderToString = require('react-dom/server').renderToString
 // const Home = require('./client/components/Home').default
 
 var app = (0, _express2.default)();
+app.use(_express2.default.static('public'));
 
 app.get('/', function (req, res) {
   var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));

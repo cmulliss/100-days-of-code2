@@ -8,7 +8,9 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import Home from './client/components/Home'
 
+// tell express to treat as public or static directory
 const app = express()
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   const content = renderToString(<Home />)

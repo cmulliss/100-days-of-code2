@@ -66,6 +66,21 @@ pp.get('/', (req, res) => {
 * to get app to work, we need to ship down all the js code related to our app, after we ship down all the html which gives some initial content on the screen
 * step one, getting html on screen
 * step two, is to make sure we then load up our react app and have the react app set up all the event handlers, action creators and data loading requests etc
+* going to create 2 bundles, one backend one for browser
+* our server side bundle, and the code inside it is separate as may contain sensitive info or code
+* make one version of bundle with all our server side and client side code
+* and one version that contains only the client
+* so, going to setup a second webpack pipeline that is going to run alongside our current one
+* create a separate webpack config for this
+* now have 2 entry points, src/client/client.js as root or entry point for our client side code base
+* and src/index.js for our server side
+* our webpack output, create a public directory for this as needs to be publically available
+* need to put npm script to run this new webpack pipeline in package.json
+* test with:   npm run dev:build:client
+* now should see a new public directory with a client side bundle.js created for us
+* now need to make sure that when we load up all of our content inside the browser, we instruct the browser to reach back to the server and download this client side bundle that was just created
+* first open all our public directory files to outside world by telling express to treat public as a freely available public directory
+* in index.js, immdeiately under where we declare our app object, add: app.use(express.static('public'))
 * 
 
 
