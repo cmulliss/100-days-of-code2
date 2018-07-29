@@ -818,9 +818,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 80: Sunday July 29, 2018
 
-Today's Progress: 
+Today's Progress: As above, getting both server and client side working.
 
-Thoughts: 
+Thoughts: Ages spent tracking down errors! Working now, so continue tomorrow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

@@ -80,7 +80,12 @@ pp.get('/', (req, res) => {
 * now should see a new public directory with a client side bundle.js created for us
 * now need to make sure that when we load up all of our content inside the browser, we instruct the browser to reach back to the server and download this client side bundle that was just created
 * first open all our public directory files to outside world by telling express to treat public as a freely available public directory
-* in index.js, immdeiately under where we declare our app object, add: app.use(express.static('public'))
+* in index.js, immediately under where we declare our app object, add: app.use(express.static('public'))
+* tells express that it needs to treat that public dir as static or public
+* also need to tell the browser, after we generate all this html, that it needs to download the bundle.js that is now freely available in the public directory
+* so after we generate our content we are going to generate a tiny html document that includes a script tag
+* going to have some code that specifically boots up the server side, and some that specifically boots up client side
+* special config for router and redux that we only want occuring on server, and some config for them that we only want executed on the client
+* our initial render is done inside the index.js file on the server,then on the client side, on the browser, we are going to breathe life into the app on the browser, and that operation is going to be started from our client.js file.
+* we are taking the html that exists on the page, and have react crawl all over it and set up any necessary event handlers, life cycle, anything that needs to occur
 * 
-
-
