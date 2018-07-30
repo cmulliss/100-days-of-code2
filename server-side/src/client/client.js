@@ -1,6 +1,9 @@
 // Startup point for the client side application
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Home from './components/Home';
+// add code for boot up process
+import React from 'react'
+import { hydrate } from 'react-dom'
+import Home from './components/Home'
 
-ReactDOM.hydrate(<Home />, document.querySelector('#root'));
+// attempt to render Home component into DOM
+// originally rendered our app once on the server
+hydrate(<Home />, document.querySelector('#root'))

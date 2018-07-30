@@ -8,7 +8,8 @@ const app = express()
 app.use(express.static('public'))
 app.get('/', (req, res) => {
   const content = renderToString(<Home />)
-
+// adding a script tag that has a source of bundle.js
+// instructs browser to go and get bundle
   const html = `
     <html>
       <head></head>

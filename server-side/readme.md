@@ -88,4 +88,30 @@ pp.get('/', (req, res) => {
 * special config for router and redux that we only want occuring on server, and some config for them that we only want executed on the client
 * our initial render is done inside the index.js file on the server,then on the client side, on the browser, we are going to breathe life into the app on the browser, and that operation is going to be started from our client.js file.
 * we are taking the html that exists on the page, and have react crawl all over it and set up any necessary event handlers, life cycle, anything that needs to occur
+* saying, go back to the server, as soon as express sees a request for a bundle.js file, look into the static directory and respond with the new bundle.js file in there
+* so not only serving up html from our server, but also attempting to load up a js bundle from it
+* so, loading up js on the client side on the browser, but very importantly, html coming back and js bundle as afterthought
+* now have option to reach back with this client side bundle and make sure all the things like our event handlers, or any other js we want to add will be executed too inside the browser
+
+### Review
+
+* on server, index.js has a lot of code to boot up the server
+* in the client.js file we have a lot of code to start our app, will be entry point for our app specifically in the browser
+* adding in react router and redux support will require separate special config
+* makes these 2 files good place to do some platform specfic initialisation of react router and redux
+* a preview: the order of operations that are going to occur when we load our app in the browser
+* see printed sheet
+![](./ssrend.png)
+* from the server, the rendered app sent to the users browser
+* client bundle takes over the html generated on the server, like a skeleton
+* booting for second time breathes life into skeleton
+* we are getting react to restore all event handlers etc
+* from point where rendered into same div, can treat like any normal react app
+* the initial render is done inside index.js on the server
+* then, on the client side on the browser we are going to breathe life into the app on the browser, operation started from client.js file
+* ReactDOM.render(<Home />, document.querySelector('#root'))
+* attempt to render Home component into DOM
+* originally rendered our app once on the server
+* want to make sure we render app into same div as the one on the server was rendered into, when code is executed on the browser side, there is already content in that div, rendered from server
+* so when we call ReactDOM.render, we are not REPLACING the html inside there, we are telling react to go back through and set up all those event handlers, where all necessary code needs to be executed to bind to that existing structure on the page
 * 
