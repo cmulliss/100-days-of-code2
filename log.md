@@ -828,9 +828,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 81: Monday July 30, 2018
 
-Today's Progress: 
+Today's Progress: Materializecss today. Typography, icons and buttons.
 
-Thoughts: 
+Thoughts: This is fun. Rather like bootstrap, but can do more with it apparently!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
