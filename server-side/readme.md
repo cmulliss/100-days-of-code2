@@ -116,4 +116,22 @@ pp.get('/', (req, res) => {
 * so when we call ReactDOM.render, we are not REPLACING the html inside there, we are telling react to go back through and set up all those event handlers, where all necessary code needs to be executed to bind to that existing structure on the page
 * HYDRATION: the entire process of putting functionalily back into the DOM that was already rendered is referred to as hydration
 
+### cleaning up files
+
+* using webpack-merge for webpack config files
+* move babel code into webpack.base.js, as a module that exports a new object 
+* in both clien and server config, import both the webpack merge and the base config etc
+* BUT, still have 3 commands to start our web server
+* use another package, a module: npm-run-all, to run multiple scripts with one command
+* create another script inside package.json
+
+```json
+"scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"npm-run-all",
+    "dev:build-server": "webpack --config webpack.server.js --watch",
+    "dev:build-client": "webpack --config webpack.client.js --watch"
+  },
+  ```
+* now just run: npm run dev, to run execute all 3 scripts in parallel
 

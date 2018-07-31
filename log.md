@@ -838,9 +838,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 82: Tuesday July 31, 2018
 
-Today's Progress: 
+Today's Progress: Got as far as tidying up webpack config files, using base config for babel stuff. Then using npm-run-all to consolidate 3 run scripts into one.
 
-Thoughts: 
+Thoughts: Getting a bit lost at times, but everything working. Will need to go through this again.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
