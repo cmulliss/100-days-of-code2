@@ -135,3 +135,36 @@ pp.get('/', (req, res) => {
   ```
 * now just run: npm run dev, to run execute all 3 scripts in parallel
 
+### Optimisation
+
+#### Ignoring files with webpack
+
+* change to dramatically improve the start up time of our server webpack process, also gives more insight into exactly how webpack and the js module systems work
+* on the browser, want webpack to copy the entire libray into bundle.js, goal for webpack to condense down all of our assets into one single file
+* on the server, where running the index.js, it's different, our server bundle is importing entire source code of express, react and react-dom. so, when webpack runs for our server process it copies the entire source code of all 3 into output bundle.js file. 
+* This is not actually required, because with node, unlike the browser, we can require node modules at RUNTIME when our server first starts up.
+* If we reduce the number of libraries that need to be placed in that file, we'll end up with a faster well-packed process, particularly during the initial start up webpack run.
+* how to prevent webpack importing our libraries into our server bundle?
+* webpack-node-externals
+* to make use of it, open webpack.server.js config file
+* import webpack-node-externals
+* add another option to config file, and call like fn: 
+* externals: [webpackNodeExternals()]
+* tells webpack to not bundle any libraries into our output bundle on the server, if that library exists inside the node modules folder
+
+#### Another refactor to server side codebase
+
+* seems small, but will make a difference when adding in react router, redux etc
+* we seem to be locating all our server side rendering logic in our index.js file
+* ok for now, but later expect route handler in file to get very large, so to prevent this file from getting too large, want to split out the logic that renders our react app to a separate file
+* so, create a helpers directory in src, and renderers.js
+* this file will house a fn, that will simply render our react app and return it as a string
+* cut 'content' from index.js and add to render as fn
+* then clean up imports in index.js, and import renderer.js
+* so now whenever a request comes in, 
+* we call the renderer fn, that goes into our render fn in renderer.js, 
+* we attempt to render our Home component to a string, * stick it into our html template and then return the entire thing.
+* the result gets sent back to whoever make this initial request
+* helps separate out the express related logic from the actual server side rendering and react logic. 
+* we are going to locate all this inside this renderer.js
+* 

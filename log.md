@@ -859,9 +859,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 84: Thursday August 2, 2018
 
-Today's Progress: 
+Today's Progress: Server side rendering, refactoring for cleaner code. 
 
-Thoughts: 
+Thoughts: Learning a lot, but difficult to remember it all, will need another visit.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
