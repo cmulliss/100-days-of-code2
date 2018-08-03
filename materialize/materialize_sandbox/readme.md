@@ -6,6 +6,12 @@
 
 lorem20 tab
 
+nav.green 
+<nav class="green"></nav>
+
+.nav-wrapper
+<div class="nav-wrapper"></div>
+
 .test for a class
 hash test for an id
 li*10 for a list of 10 items

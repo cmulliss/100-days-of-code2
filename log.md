@@ -869,9 +869,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 85: Friday August 3, 2018
 
-Today's Progress: 
+Today's Progress: Materializecss, completing navbar and search section, including fixed nav, dropdowns, hidden items.
 
-Thoughts: 
+Thoughts: Got a bit confusing.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

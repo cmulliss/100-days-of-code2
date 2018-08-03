@@ -125,18 +125,18 @@
     </div>
     <!-- ./ CONTAINER END -->
 
-    <!-- START HERE -->
+    <!-- START HERE goes under container -->
 
     <!-- STANDARD MENU -->
     <nav>
         <div class="nav-wrapper">
             <div class="container">
-                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" class="brand-logo center">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-small-and-down">
                     <li>
                         <a href="#">Home</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#">About</a>
                     </li>
                     <li>
@@ -158,7 +158,35 @@
                 <a class="button-collapse" data-activates="mobile-nav" href="#">
                     <i class="material-icons">menu</i>
                 </a>
-                <ulclass="right hide-on-medium-and-down" id="mobile-nav">
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+
+                    <!-- DROPDOWN TRIGGER -->
+                    <li>
+                        <a class="dropdown-button" data-activates="my-dropdown" href="#!">Dropdown
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <!-- BUTTON LINK -->
+                    <li>
+                        <a class="btn waves-effect waves-light">Login</a>
+                    </li>
+                    <!-- ICON LINK -->
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">person</i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="side-nav" id="nav-mobile">
                     <li>
                         <a href="#">Home</a>
                     </li>
@@ -168,41 +196,13 @@
                     <li>
                         <a href="#">Contact</a>
                     </li>
-
-                    <!-- DROPDOWN TRIGGER -->
-                    <li>
-                        <a href="#!">Dropdown
-                            <i></i>
-                        </a>
-                    </li>
-                    <!-- BUTTON LINK -->
-                    <li>
-                        <a>Login</a>
-                    </li>
-                    <!-- ICON LINK -->
-                    <li>
-                        <a href="#">
-                            <i>p</i>
-                        </a>
-                    </li>
-                    </ul>
-                    <ul class="side-nav" id="nav-mobile">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- DROPDOWN MENU -->
-    <ul>
+    <ul id="my-dropdown" class="dropdown-content">
         <li>
             <a href="#">Link 1</a>
         </li>
@@ -218,18 +218,48 @@
     <br>
 
     <!-- FIXED NAVBAR -->
-    <div>
-
+    <div class="navbar-fixed">
+        <nav class="black">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="#" class="brand-logo center">Logo</a>
+                    <ul id="nav-mobile" class="right hide-on-small-and-down">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
 
     <br>
     <br>
 
     <!-- SEARCH BAR -->
+    <nav class="green">
+        <div class="nav-wrapper">
+            <form>
 
-
+                <div class="input-field">
+                    <input type="search" id="search" required/>
+                    <label for="search" class="label icon">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
 
     <!-- END HERE -->
+    <!-- MOVES CONTENT UP -->
 
     <div style="margin-top:1000px;"></div>
 
@@ -248,7 +278,7 @@
 
             // JAVASCRIPT START HERE //
             // initialise side menu with jquery
-            $('.button-collapse').sideNav()
+            $('.button-collapse').sideNav();
 
 
 
