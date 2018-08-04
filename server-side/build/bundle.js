@@ -80,7 +80,7 @@ var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _renderer = __webpack_require__(5);
+var _renderer = __webpack_require__(3);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
@@ -88,9 +88,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var app = (0, _express2.default)();
 
+// instead of root route, /, we use * so express
+// will handle all routes inside our app
 app.use(_express2.default.static('public'));
-app.get('/', function (req, res) {
-  res.send((0, _renderer2.default)());
+app.get('*', function (req, res) {
+  res.send((0, _renderer2.default)(req));
 });
 
 app.listen(3000, function () {
@@ -105,12 +107,51 @@ module.exports = require("express");
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _server = __webpack_require__(4);
+
+var _Home = __webpack_require__(5);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));
+
+  return '\n    <html>\n      <head></head>\n      <body>\n        <div id="root">' + content + '</div>\n        <script src="bundle.js"></script>\n      </body>\n    </html>\n  ';
+};
+// no longer need to assign to variable html, 'const html =' , but can just 'return' the string
+
+// adding a script tag that has a source of bundle.js
+// instructs browser to go and get bundle
+
+// import Home from '../client/components/Home'
+
+// export a single fn that will render our app and return it as a string, cut from index.js
+// StaticRouter has required props: context
+// pass in empty object
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -146,38 +187,6 @@ var Home = function Home() {
 };
 
 exports.default = Home;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _server = __webpack_require__(3);
-
-var _Home = __webpack_require__(4);
-
-var _Home2 = _interopRequireDefault(_Home);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// export a single fn that will render our app and return it as a string, cut from index.js
-exports.default = function () {
-  var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));
-  // adding a script tag that has a source of bundle.js
-  // instructs browser to go and get bundle
-  return '\n    <html>\n      <head></head>\n      <body>\n        <div id="root">' + content + '</div>\n        <script src="bundle.js"></script>\n      </body>\n    </html>\n  ';
-};
-// no longer need to assign to variable html, 'const html =' , but can just 'return' the string
 
 /***/ })
 /******/ ]);

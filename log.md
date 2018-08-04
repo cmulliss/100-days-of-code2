@@ -879,9 +879,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 86: Saturday August 4, 2018
 
-Today's Progress: 
+Today's Progress: More ssr, routing.
 
-Thoughts: 
+Thoughts: Getting lost, will try another tutorial.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
