@@ -889,9 +889,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 87: Sunday August 5, 2018
 
-Today's Progress: 
+Today's Progress: Got stuck doing the ssr tutorial. Decided to learn more about node and express.
 
-Thoughts: 
+Thoughts: After feeling a bit down yesterday, feeling ridiculously happy today at finally getting connected to a @MongoDB on mLab, took ages and a lot of troubleshooting.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
