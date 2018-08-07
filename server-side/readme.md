@@ -167,4 +167,5 @@ pp.get('/', (req, res) => {
 * the result gets sent back to whoever make this initial request
 * helps separate out the express related logic from the actual server side rendering and react logic. 
 * we are going to locate all this inside this renderer.js
-* 
+* NB __now using npm run dev__
+

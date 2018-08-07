@@ -12,7 +12,7 @@
     "server": "nodemon server.js"
   },
   ```
-* then use 'npm run server' to run nodemon too
+* then use __'npm run server'__ to run nodemon too
 
 ## connecting to MongoDB with mongoose
 

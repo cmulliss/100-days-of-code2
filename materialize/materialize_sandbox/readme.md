@@ -4,6 +4,10 @@
 
 (https://code.visualstudio.com/docs/editor/emmet)
 
+multiple select
+cmd + d
+
+
 lorem20 tab
 
 nav.green 

@@ -899,9 +899,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 88: Monday August 6, 2018
 
-Today's Progress: 
+Today's Progress: More materialize.
 
-Thoughts: 
+Thoughts: Not sure if this is the best option, so looking at semantic ui etc.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
