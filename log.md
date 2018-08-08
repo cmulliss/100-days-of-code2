@@ -909,9 +909,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 89: Tuesday August 7, 2018
 
-Today's Progress: 
+Today's Progress: Reading up on mongo and mongoose.
 
-Thoughts: 
+Thoughts: Short session today, will continue tomorrow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -919,9 +919,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 90: Wednesday August 8, 2018
 
-Today's Progress: 
+Today's Progress: Setting up models and schemas. 
 
-Thoughts: 
+Thoughts: Interesting, will need to redo this when completed.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
