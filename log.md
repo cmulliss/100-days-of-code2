@@ -929,9 +929,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 91: Thursday August 9, 2018
 
-Today's Progress: 
+Today's Progress: More materializecss. Grids, fixed and responsive. 
 
-Thoughts: 
+Thoughts: Spent some time looking at alternatives, but decided to stick with materializecss for now.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
