@@ -939,9 +939,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 92: Friday August 10, 2018
 
-Today's Progress: 
+Today's Progress: MERN stack server stuff again today, using Postman to check requests.
 
-Thoughts: 
+Thoughts: Code broken so undid the last lot of work to start again. Working this time. 
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -949,9 +949,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 93 Saturday August 11, 2018
 
-Today's Progress: 
+Today's Progress: Some materialize stuff today, variations of 'cards'. Then some more MEARN stack. Login and using JWT.
 
-Thoughts: 
+Thoughts: Maerialize very similar to bootstrap, but seems to offer more. Unserstand the MEARN stuff, to some extent, but difficult to remember it. Will need to go over it again later.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
