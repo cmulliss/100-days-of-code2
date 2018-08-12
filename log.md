@@ -959,9 +959,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 94: Sunday August 12, 2018
 
-Today's Progress: 
+Today's Progress: Styled components today, css as javascript.
 
-Thoughts: 
+Thoughts: Have been looking at styling options, and this looks really good, but so does materialize.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
