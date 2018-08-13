@@ -969,9 +969,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 95: Monday August 13, 2018
 
-Today's Progress: 
+Today's Progress: Completed styled components course, including adapting create-react-app for styled components.
 
-Thoughts: 
+Thoughts: Mostly understand this, but will research further and try some other briefer tutorials.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
