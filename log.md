@@ -979,9 +979,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 96: Tuesday August 14, 2018
 
-Today's Progress: 
+Today's Progress: More MEARN stack, using Postman for my http requests. Beginning validation.
 
-Thoughts: 
+Thoughts: A lot of new stuff!
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -989,9 +989,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 97: Wednesday August 15, 2018
 
-Today's Progress: 
+Today's Progress: Completed the backend validation stuff.
 
-Thoughts: 
+Thoughts: Front end next, but my spend some time on css too.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
