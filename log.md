@@ -559,7 +559,7 @@ Today's Progress: Day out, so no coding today.
 
 Thoughts: Will add another day to end.
 
-Link to work: <https://github.com/cmulliss/100-days-of-code2
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
@@ -999,9 +999,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 98: Thursday August 16, 2018
 
-Today's Progress: 
+Today's Progress: Returned to Stephen Grider's server side tutorial. Going over a large section of this.
 
-Thoughts: 
+Thoughts: Going well, feeling less out of my depth.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

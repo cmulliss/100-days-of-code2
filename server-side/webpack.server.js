@@ -1,4 +1,5 @@
 const path = require('path')
+// webpack merge used to merge base config
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.js')
 // to prevent libraries being added to bundle

@@ -90,6 +90,7 @@ var app = (0, _express2.default)();
 
 // instead of root route, /, we use * so express
 // will handle all routes inside our app
+// tells express to treat public dir as a static or public dir
 app.use(_express2.default.static('public'));
 app.get('*', function (req, res) {
   res.send((0, _renderer2.default)(req));
@@ -187,6 +188,9 @@ var Home = function Home() {
 };
 
 exports.default = Home;
+// need to ship down the js as well as the html
+// step 1, ship down html
+// step 2, load up event handlers etc
 
 /***/ })
 /******/ ]);
