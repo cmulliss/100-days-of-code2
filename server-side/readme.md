@@ -145,14 +145,16 @@ pp.get('/', (req, res) => {
 * This is not actually required, because with node, unlike the browser, we can require node modules at RUNTIME when our server first starts up.
 * If we reduce the number of libraries that need to be placed in that file, we'll end up with a faster well-packed process, particularly during the initial start up webpack run.
 * how to prevent webpack importing our libraries into our server bundle?
-* webpack-node-externals
+
+### webpack-node-externals
+
 * to make use of it, open webpack.server.js config file
 * import webpack-node-externals
 * add another option to config file, and call like fn: 
 * externals: [webpackNodeExternals()]
 * tells webpack to not bundle any libraries into our output bundle on the server, if that library exists inside the node modules folder
 
-#### Another refactor to server side codebase
+#### Another refactor to server side codebase: renderer.js
 
 * seems small, but will make a difference when adding in react router, redux etc
 * we seem to be locating all our server side rendering logic in our index.js file
@@ -163,9 +165,58 @@ pp.get('/', (req, res) => {
 * then clean up imports in index.js, and import renderer.js
 * so now whenever a request comes in, 
 * we call the renderer fn, that goes into our render fn in renderer.js, 
-* we attempt to render our Home component to a string, * stick it into our html template and then return the entire thing.
+* we attempt to render our Home component to a string, 
+* stick it into our html template and then return the entire thing.
 * the result gets sent back to whoever make this initial request
 * helps separate out the express related logic from the actual server side rendering and react logic. 
 * we are going to locate all this inside this renderer.js
+* so, renderer.js is going to house a fn that will simply render our react app and return it as a string
 * NB __now using npm run dev__
+
+## React Router support
+
+* currently only shows root route
+* express is not going to enforce any routing rules on any incoming requests
+* express is going to delegate 100% routing inside app to react router, pass on requests involving html
+* react router decides what appears on screen
+* BrowserRouter component 100% hardcoded to look at url in address bar of browser, PROBLEM, because when we render our app on the server we do not have an address bar
+* to solve this, using 2 different routers:
+1. Server: Static router, for ssr
+2. Client: Browser router, for use when running web browser, when rendered for 2nd time, __hydrated__
+* create Routes.js, import into both, one distinct set of route mappings
+* first edit renderer.js, remove Home import as the Home component is now being rendered by the Routes component
+* instead import StaticRouter and Routes component
+* then update renderToString, to show static router, with inside it, all our static routes
+* static router needs 'context' passed in as empty object
+* empty object needs2 sets {{}}
+* the outer set is to indicate we are about to pass a plain js variable
+* the inner set is the actual empty object
+* the static router need to be told exactly what the current path is (as unable to look at browser unlike browser router)
+* we need to communicate the current path the user is trying to access to the static router
+* so it knows what set of components to show on screen
+* in the index.js file we have a route handler, with a request object which contains the url which the user is trying to access
+* app.get('*', (req, res) => {
+* going to take the request object and pass it as an argument to the render fn
+*   res.send(renderer(req))
+* then inside renderer.js, we can receive that as req
+* export default (req) => {
+* also needs property 'location' so this is the actual path it will use to look at all the different routes it has loaded into it and decide what to show on the screen
+* the actual true url that we need to use here is a property on the request object which is req.path
+* test by adding test route to Routes.js
+* <Route path='/hi' component={() => 'Hi'} />
+* but currently only have one route handler set up inside express
+* so when the express routing tier gets some incoming request, and express is only recognising requests to '/', the root route of our app, need to tell express to look for any route, in index.js route handler:
+
+```javascript
+app.use(express.static('public'))
+app.get('*', (req, res) => {
+    res.send(renderer(req))
+```
+
+* then passes it on to react router and lets it deal with it
+* express is always going to pass incoming requests to our renderer, which is going to pass the request on to react router, and allow that to decide what to do with it
+
+## Simple express server with API
+
+* https://react-ssr-api.herokuapp.com/
 

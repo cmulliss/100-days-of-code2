@@ -1009,9 +1009,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 99: Friday August 17, 2018
 
-Today's Progress: 
+Today's Progress: Started to look at integrating redux into the server side app. 
 
-Thoughts: 
+Thoughts: Interesting, I will continue tomorrow.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 

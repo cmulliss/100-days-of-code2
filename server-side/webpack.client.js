@@ -1,6 +1,7 @@
-const path = require('path');
-const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base.js');
+const path = require('path')
+const merge = require('webpack-merge')
+const baseConfig = require('./webpack.base.js')
+// webpack merge used to merge base config
 
 const config = {
   // Tell webpack the root file of our
@@ -13,6 +14,6 @@ const config = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public')
   }
-};
+}
 
-module.exports = merge(baseConfig, config);
+module.exports = merge(baseConfig, config)

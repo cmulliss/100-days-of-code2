@@ -99,6 +99,7 @@ app.get('*', function (req, res) {
 app.listen(3000, function () {
   console.log('Listening on port 3000');
 });
+// going to use webpack-node-externals
 
 /***/ }),
 /* 2 */
@@ -123,17 +124,27 @@ var _react2 = _interopRequireDefault(_react);
 
 var _server = __webpack_require__(4);
 
-var _Home = __webpack_require__(5);
+var _reactRouterDom = __webpack_require__(6);
 
-var _Home2 = _interopRequireDefault(_Home);
+var _Routes = __webpack_require__(7);
+
+var _Routes2 = _interopRequireDefault(_Routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
-  var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));
-
-  return '\n    <html>\n      <head></head>\n      <body>\n        <div id="root">' + content + '</div>\n        <script src="bundle.js"></script>\n      </body>\n    </html>\n  ';
+// single fn to render our app and return as string
+// static router needs 'context' passed in as empty object
+exports.default = function (req) {
+  var content = (0, _server.renderToString)(_react2.default.createElement(
+    _reactRouterDom.StaticRouter,
+    { location: req.path, context: {} },
+    _react2.default.createElement(_Routes2.default, null)
+  ));
+  // return string
+  return '\n      <html>\n        <head></head>\n        <body>\n          <div id="root">' + content + '</div>\n          <script src="bundle.js"></script>\n        </body>\n      </html>\n    ';
 };
+//  so, renderer.js is going to house a fn that will simply render our react app and return it as a string
+
 // no longer need to assign to variable html, 'const html =' , but can just 'return' the string
 
 // adding a script tag that has a source of bundle.js
@@ -144,6 +155,9 @@ exports.default = function () {
 // export a single fn that will render our app and return it as a string, cut from index.js
 // StaticRouter has required props: context
 // pass in empty object
+
+// const content = renderToString(<Home />)
+// update to show static router with all our custom routes
 
 /***/ }),
 /* 4 */
@@ -191,6 +205,53 @@ exports.default = Home;
 // need to ship down the js as well as the html
 // step 1, ship down html
 // step 2, load up event handlers etc
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-router-dom");
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(6);
+
+var _Home = __webpack_require__(5);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default })
+  );
+};
+
+// export functional component, contains
+// div with all the different route mappings
+
+// need to import this mapping into both the
+// client.js file and the index.js (renderer)
+// file, set up separate router in each
+
+// dummy route
+// <Route path='/hi' component={() => 'Hi'} />
 
 /***/ })
 /******/ ]);
