@@ -220,3 +220,32 @@ app.get('*', (req, res) => {
 
 * https://react-ssr-api.herokuapp.com/
 
+## Redux
+
+* redux will be in charge of all the data managment of our app
+* add boilerplate and can then make requests of the API
+* 4 big challenges:
+
+1. redux needs different config on browser vs server, the way it behaves on the server significantly differnet to the way it behaves in the client. Needs to do this to solve other 3 items.
+* going to create 2 different stores, one for browser bundle and one store for the server bundle
+
+2. aspects of authentication needs to be handled on server, normally this is only on the browser. Easy client side with cookie based Oauth, but we dont have easy access to the cookie data that proves the user is authenticated. Need a solution for this.
+
+3. __Biggest challenge:__ Need some way to detect when all initial data load action creators are completed on server. In a normal redux app, running in the browser, whenever we want to load up some data we call an action creator, that then makes an ajax request and then wwhen that request resolves we dispatch an action and the app updates.
+* NB, after all reducers run, redux collects all the new state and re-arranges the app automatically. So when we simply call an action creator and and the update occurs automatically, and we dont know when the action creators have finished fetching data. On the server, however we need to know the exact instant that the request issued by the action creator is finished, so we can attempt to render the app to a string and send it back down to the browser.
+
+4. Need state hydaration on browser. 
+
+### Challenge 1
+
+* creating 2 stores with redux, one inside our render file and one inside our client.js file.
+
+### create new store to use on client side
+
+* reducers, initial state which is an empty object, then hook up the applyMiddleware call and pass in the redux thunk library
+* then take this store and put into a provider, which will wrap our entire react app. Pass in store as prop to provider
+* provider now has a reference to the redux store, any time the store changes, that provider will alert any connected components that they need to re-render.
+
+### create server side store
+
+* 
