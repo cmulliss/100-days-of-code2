@@ -7,9 +7,11 @@ import Routes from '../client/Routes'
 // static router needs 'context' passed in as empty object
 export default req => {
   const content = renderToString(
-    <StaticRouter location={req.path} context={{}}>
-      <Routes />
-    </StaticRouter>
+    <Provider store={store}>
+      <StaticRouter location={req.path} context={{}}>
+        <Routes />
+      </StaticRouter>
+    </Provider>
   )
   // return string
   return `

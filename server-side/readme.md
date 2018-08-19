@@ -248,4 +248,11 @@ app.get('*', (req, res) => {
 
 ### create server side store
 
-* 
+* rather than creating redux store directly inside the renderer.js file, create a second helper file for this, createStore.js
+* not going to import provider into creatStore.js because sole purpose is to create the redux store
+* whereas client side we wanted to both create the redux store and immediately use it inside the redux app
+* server side about creating the store and working with it before we attempt to render our app
+* so not going to create store inside our renderer, but instead inside our route handler, index.js file
+* then after we have done all of our store initialisation, all the data loading inside of it, then we will pass the store off the renderer, where it can then be used by the provider ```* *
+
+```

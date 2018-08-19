@@ -90,6 +90,10 @@ var _renderer = __webpack_require__(4);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
+var _createStore = __webpack_require__(8);
+
+var _createStore2 = _interopRequireDefault(_createStore);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
@@ -99,13 +103,20 @@ var app = (0, _express2.default)();
 // tells express to treat public dir as a static or public dir
 app.use(_express2.default.static('public'));
 app.get('*', function (req, res) {
-  res.send((0, _renderer2.default)(req));
+  var store = (0, _createStore2.default)();
+
+  // some logic to initialize
+  // and load data into the store
+
+  res.send((0, _renderer2.default)(req, store));
 });
 
 app.listen(3000, function () {
   console.log('Listening on port 3000');
 });
 // going to use webpack-node-externals
+// inside our route handler, going to use fn to create a store
+// then going to take that store and pass it in as a second arg to the renderer
 
 /***/ }),
 /* 3 */
@@ -142,9 +153,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // static router needs 'context' passed in as empty object
 exports.default = function (req) {
   var content = (0, _server.renderToString)(_react2.default.createElement(
-    _reactRouterDom.StaticRouter,
-    { location: req.path, context: {} },
-    _react2.default.createElement(_Routes2.default, null)
+    Provider,
+    { store: store },
+    _react2.default.createElement(
+      _reactRouterDom.StaticRouter,
+      { location: req.path, context: {} },
+      _react2.default.createElement(_Routes2.default, null)
+    )
   ));
   // return string
   return '\n      <html>\n        <head></head>\n        <body>\n          <div id="root">' + content + '</div>\n          <script src="bundle.js"></script>\n        </body>\n      </html>\n    ';
@@ -252,6 +267,45 @@ exports.default = Home;
 // need to ship down the js as well as the html
 // step 1, ship down html
 // step 2, load up event handlers etc
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _redux = __webpack_require__(9);
+
+var _reduxThunk = __webpack_require__(10);
+
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// just creating store in here, that's it
+exports.default = function () {
+  var store = (0, _redux.createStore)(reducers, {}, applyMiddleware(_reduxThunk2.default));
+  return store;
+};
+
+// work with store long before we call our render fn
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-thunk");
 
 /***/ })
 /******/ ]);
