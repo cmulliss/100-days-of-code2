@@ -253,6 +253,10 @@ app.get('*', (req, res) => {
 * whereas client side we wanted to both create the redux store and immediately use it inside the redux app
 * server side about creating the store and working with it before we attempt to render our app
 * so not going to create store inside our renderer, but instead inside our route handler, index.js file
-* then after we have done all of our store initialisation, all the data loading inside of it, then we will pass the store off the renderer, where it can then be used by the provider ```* *
+* then after we have done all of our store initialisation, all the data loading inside of it, then we will pass the store off the renderer, where it can then be used by the provider
 
-```
+## Action creators and reducers
+
+* The sole purpose of our action creator is to make an Ajax requst over to our api and fetch that list of users
+* then the users reducer will grab that list of users and store it through the reducer 
+* 

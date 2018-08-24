@@ -1019,18 +1019,18 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 100: Saturday August 18, 2018
 
-Today's Progress: 
+Today's Progress: Continuing with tutorial, onto browser store creation
 
-Thoughts: 
+Thoughts: Slow, as going over this more than once.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----100 Days Of Code - Log
 Day 101: Sunday August 19, 2018
 
-Today's Progress: 
+Today's Progress: Server store creation. 
 
-Thoughts: 
+Thoughts: Just plodding on.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -1038,9 +1038,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 102: Monday August 20, 2018
 
-Today's Progress: 
+Today's Progress: Starting on action creators.
 
-Thoughts: 
+Thoughts: As above.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -1048,9 +1048,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 103: Tuesday August 21, 2018
 
-Today's Progress: 
+Today's Progress: Unwell with virus
 
-Thoughts: 
+Thoughts: Will add to end of log.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -1058,9 +1058,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 104: Wednesday August 22, 2018
 
-Today's Progress: 
+Today's Progress: Still unwell.
 
-Thoughts: 
+Thoughts: As above, will add to end.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -1068,9 +1068,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 105: Thursday August 23, 2018
 
-Today's Progress: 
+Today's Progress: Going over the work from earlier in the week, still felling unwell.
 
-Thoughts: 
+Thoughts: Difficult to concentrate.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -1117,6 +1117,26 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 ----
 100 Days Of Code - Log
 Day 110: Tuesday August 28, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 110: Wednesday August 29, 2018
+
+Today's Progress: 
+
+Thoughts: 
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 110: Thursday August 30, 2018
 
 Today's Progress: 
 
