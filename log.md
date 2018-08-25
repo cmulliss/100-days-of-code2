@@ -1078,9 +1078,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 106: Friday August 24, 2018
 
-Today's Progress: 
+Today's Progress: Going over work, in this tutorial, so far today.
 
-Thoughts: 
+Thoughts: Useful revision.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -1088,9 +1088,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 107: Saturday August 25, 2018
 
-Today's Progress: 
+Today's Progress: Continuing with the action creators and reducer in this tutorial.
 
-Thoughts: 
+Thoughts: Beginning to come together.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
