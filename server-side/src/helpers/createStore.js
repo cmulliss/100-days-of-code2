@@ -1,9 +1,10 @@
-import { createStore, applyMidddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
+import reducers from '../client/reducers'
 
-// just creating store in here, that's it
 export default () => {
   const store = createStore(reducers, {}, applyMiddleware(thunk))
+
   return store
 }
 
