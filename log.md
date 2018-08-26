@@ -1098,9 +1098,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 108: Sunday August 26, 2018
 
-Today's Progress: 
+Today's Progress: Continuing tutorial.
 
-Thoughts: 
+Thoughts: Useful lookiing over the recent work. 
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
