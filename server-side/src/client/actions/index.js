@@ -13,3 +13,6 @@ export const fetchUsers = () => async dispatch => {
     payload: res
   })
 }
+// error message: regeneratorRuntime is not defined
+// due to async, needs setting up in index.js
+// import babel-polyfil at top of index.js

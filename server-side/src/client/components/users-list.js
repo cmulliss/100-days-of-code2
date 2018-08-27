@@ -7,7 +7,6 @@ class UsersList extends Component {
     this.props.fetchUsers()
   }
 
-  // helper fn
   renderUsers () {
     return this.props.users.map(user => {
       return <li key={user.id}>{user.name}</li>
@@ -18,7 +17,7 @@ class UsersList extends Component {
     return (
       <div>
         Here's a big list of users:
-        <ul>{this.renderUsers}</ul>
+        <ul>{this.renderUsers()}</ul>
       </div>
     )
   }

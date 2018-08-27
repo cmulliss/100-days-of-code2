@@ -1,5 +1,6 @@
 // Startup point for the client side application
 // add code for boot up process
+import 'babel-polyfill'
 import React from 'react'
 import { hydrate } from 'react-dom'
 // import Home from './components/Home' replaced by Routes

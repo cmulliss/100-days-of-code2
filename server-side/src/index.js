@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import express from 'express'
 import renderer from './helpers/renderer'
 import createStore from './helpers/createStore'
@@ -23,3 +24,6 @@ app.listen(3000, () => {
 // going to use webpack-node-externals
 // inside our route handler, going to use fn to create a store
 // then going to take that store and pass it in as a second arg to the renderer
+
+// to avoid regeneratorRuntime is not defined error, with action creator, import babel-polyfill
+// also import into client.js
