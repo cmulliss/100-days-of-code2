@@ -26,8 +26,12 @@ class UsersList extends Component {
 function mapStateToProps (state) {
   return { users: state.users }
 }
-function loadData () {
-  console.log('I am trying to load some data')
+function loadData (store) {
+  // manual dispatch, calling fetchUsers action creator
+  // and pass results into store.dispatch
+  // make network request to api, going to return a promise
+  // representing the nework request
+  return store.dispatch(fetchUsers())
 }
 export { loadData }
 export default connect(mapStateToProps, { fetchUsers })(UsersList)

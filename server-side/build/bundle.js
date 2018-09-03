@@ -183,12 +183,15 @@ app.use(_express2.default.static('public'));
 app.get('*', function (req, res) {
   var store = (0, _createStore2.default)();
   // some logic to initialize
-  // and load data into the store
-  (0, _reactRouterConfig.matchRoutes)(_Routes2.default, req.path).map(function (_ref) {
+  // and load data into the store, so now all
+  // our loadData fns will have a ref to our ss redux store
+  // will return an array, so assign to a var called promised
+  var promises = (0, _reactRouterConfig.matchRoutes)(_Routes2.default, req.path).map(function (_ref) {
     var route = _ref.route;
 
-    return route.loadData ? route.loadData() : null;
+    return route.loadData ? route.loadData(store) : null;
   });
+  console.log(promises);
 
   res.send((0, _renderer2.default)(req, store));
 });
@@ -461,8 +464,12 @@ var UsersList = function (_Component) {
 function mapStateToProps(state) {
   return { users: state.users };
 }
-function loadData() {
-  console.log('I am trying to load some data');
+function loadData(store) {
+  // manual dispatch, calling fetchUsers action creator
+  // and pass results into store.dispatch
+  // make network request to api, going to return a promise
+  // representing the nework request
+  return store.dispatch((0, _actions.fetchUsers)());
 }
 exports.loadData = loadData;
 exports.default = (0, _reactRedux.connect)(mapStateToProps, { fetchUsers: _actions.fetchUsers })(UsersList);

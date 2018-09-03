@@ -15,10 +15,13 @@ app.use(express.static('public'))
 app.get('*', (req, res) => {
   const store = createStore()
   // some logic to initialize
-  // and load data into the store
-  matchRoutes(Routes, req.path).map(({ route }) => {
-    return route.loadData ? route.loadData() : null
+  // and load data into the store, so now all
+  // our loadData fns will have a ref to our ss redux store
+  // will return an array, so assign to a var called promised
+  const promises = matchRoutes(Routes, req.path).map(({ route }) => {
+    return route.loadData ? route.loadData(store) : null
   })
+  console.log(promises)
 
   res.send(renderer(req, store))
 })
