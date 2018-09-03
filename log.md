@@ -1106,7 +1106,17 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 109: Monday August 27, 2018
+Day 109: Monday September 2, 2018
+
+Today's Progress: Missed a whole week due to illnes, so picking up on the server side work today.
+
+Thoughts: Not panicking, just glad to be feeling better and able to get back to coding.
+
+Link to work: <https://github.com/cmulliss/100-days-of-code2>
+
+----
+100 Days Of Code - Log
+Day 110: Tuesday September 3, 2018
 
 Today's Progress: 
 
@@ -1116,7 +1126,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 110: Tuesday August 28, 2018
+Day 110: Wednesday September 4, 2018
 
 Today's Progress: 
 
@@ -1126,17 +1136,7 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
 ----
 100 Days Of Code - Log
-Day 110: Wednesday August 29, 2018
-
-Today's Progress: 
-
-Thoughts: 
-
-Link to work: <https://github.com/cmulliss/100-days-of-code2>
-
-----
-100 Days Of Code - Log
-Day 110: Thursday August 30, 2018
+Day 110: Thursday September 5, 2018
 
 Today's Progress: 
 

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,16 +73,10 @@ module.exports = require("react");
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-router-dom");
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
 module.exports = require("react-redux");
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -93,7 +87,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.fetchUsers = exports.FETCH_USERS = undefined;
 
-var _axios = __webpack_require__(12);
+var _axios = __webpack_require__(13);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -144,31 +138,39 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
 // import babel-polyfil at top of index.js
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(17);
+__webpack_require__(5);
 
 var _express = __webpack_require__(6);
 
 var _express2 = _interopRequireDefault(_express);
 
+var _reactRouterConfig = __webpack_require__(18);
+
+var _Routes = __webpack_require__(10);
+
+var _Routes2 = _interopRequireDefault(_Routes);
+
 var _renderer = __webpack_require__(7);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
-var _createStore = __webpack_require__(13);
+var _createStore = __webpack_require__(14);
 
 var _createStore2 = _interopRequireDefault(_createStore);
+
+var _vm = __webpack_require__(19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -180,9 +182,13 @@ var app = (0, _express2.default)();
 app.use(_express2.default.static('public'));
 app.get('*', function (req, res) {
   var store = (0, _createStore2.default)();
-
   // some logic to initialize
   // and load data into the store
+  (0, _reactRouterConfig.matchRoutes)(_Routes2.default, req.path).map(function (_ref) {
+    var route = _ref.route;
+
+    return route.loadData ? route.loadData() : null;
+  });
 
   res.send((0, _renderer2.default)(req, store));
 });
@@ -196,6 +202,12 @@ app.listen(3000, function () {
 
 // to avoid regeneratorRuntime is not defined error, with action creator, import babel-polyfill
 // also import into client.js
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("babel-polyfill");
 
 /***/ }),
 /* 6 */
@@ -220,18 +232,21 @@ var _react2 = _interopRequireDefault(_react);
 
 var _server = __webpack_require__(8);
 
-var _reactRouterDom = __webpack_require__(1);
+var _reactRouterDom = __webpack_require__(9);
 
-var _Routes = __webpack_require__(9);
+var _reactRouterConfig = __webpack_require__(18);
+
+var _Routes = __webpack_require__(10);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // single fn to render our app and return as string
 // static router needs 'context' passed in as empty object
+// replace <Routes /> inside staticRouter
 exports.default = function (req, store) {
   var content = (0, _server.renderToString)(_react2.default.createElement(
     _reactRedux.Provider,
@@ -239,7 +254,11 @@ exports.default = function (req, store) {
     _react2.default.createElement(
       _reactRouterDom.StaticRouter,
       { location: req.path, context: {} },
-      _react2.default.createElement(_Routes2.default, null)
+      _react2.default.createElement(
+        'div',
+        null,
+        (0, _reactRouterConfig.renderRoutes)(_Routes2.default)
+      )
     )
   ));
   // return string
@@ -269,6 +288,12 @@ module.exports = require("react-dom/server");
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-router-dom");
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -282,26 +307,26 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(1);
-
-var _Home = __webpack_require__(10);
+var _Home = __webpack_require__(11);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _usersList = __webpack_require__(11);
+var _usersList = __webpack_require__(12);
 
 var _usersList2 = _interopRequireDefault(_usersList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-    _react2.default.createElement(_reactRouterDom.Route, { path: '/users', component: _usersList2.default })
-  );
-};
+// import { Route } from 'react-router-dom'
+exports.default = [{
+  path: '/',
+  component: _Home2.default,
+  exact: true
+}, {
+  loadData: _usersList.loadData,
+  path: '/users',
+  component: _usersList2.default
+}];
 
 // export functional component, contains
 // div with all the different route mappings
@@ -313,8 +338,11 @@ exports.default = function () {
 // dummy route
 // <Route path='/hi' component={() => 'Hi'} />
 
+// going to use react-router-config, subset of react-router, but will mangle our routes
+// need to define them in an array of objects
+
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -355,7 +383,7 @@ exports.default = Home;
 // step 2, load up event handlers etc
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -364,6 +392,7 @@ exports.default = Home;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.loadData = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -371,9 +400,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(2);
+var _reactRedux = __webpack_require__(1);
 
-var _actions = __webpack_require__(3);
+var _actions = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -432,6 +461,10 @@ var UsersList = function (_Component) {
 function mapStateToProps(state) {
   return { users: state.users };
 }
+function loadData() {
+  console.log('I am trying to load some data');
+}
+exports.loadData = loadData;
 exports.default = (0, _reactRedux.connect)(mapStateToProps, { fetchUsers: _actions.fetchUsers })(UsersList);
 // as soon as this compoent gets rendered on the screen its going to attempt to grab the list of users
 // then a starter render method
@@ -440,13 +473,13 @@ exports.default = (0, _reactRedux.connect)(mapStateToProps, { fetchUsers: _actio
 // the reducer we just created is being assigned to the users property of our state object
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -456,13 +489,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(4);
+var _redux = __webpack_require__(3);
 
-var _reduxThunk = __webpack_require__(14);
+var _reduxThunk = __webpack_require__(15);
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reducers = __webpack_require__(15);
+var _reducers = __webpack_require__(16);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -477,13 +510,13 @@ exports.default = function () {
 // work with store long before we call our render fn
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -493,9 +526,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(4);
+var _redux = __webpack_require__(3);
 
-var _usersReducer = __webpack_require__(16);
+var _usersReducer = __webpack_require__(17);
 
 var _usersReducer2 = _interopRequireDefault(_usersReducer);
 
@@ -511,7 +544,7 @@ exports.default = (0, _redux.combineReducers)({
 // import the combinedReducers call into bothe the client.js file and the helpers/createStore.js file
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -521,7 +554,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(3);
+var _index = __webpack_require__(2);
 
 // FETCH_USERS is a named import, so needs {}
 
@@ -546,10 +579,16 @@ exports.default = function () {
 //
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
-module.exports = require("babel-polyfill");
+module.exports = require("react-router-config");
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+module.exports = require("vm");
 
 /***/ })
 /******/ ]);

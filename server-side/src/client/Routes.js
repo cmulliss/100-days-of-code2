@@ -1,16 +1,20 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 import Home from './components/Home'
-import UsersList from './components/users-list'
+import UsersList, { loadData } from './components/users-list'
 
-export default () => {
-  return (
-    <div>
-      <Route exact path='/' component={Home} />
-      <Route path='/users' component={UsersList} />
-    </div>
-  )
-}
+export default [
+  {
+    path: '/',
+    component: Home,
+    exact: true
+  },
+  {
+    loadData: loadData,
+    path: '/users',
+    component: UsersList
+  }
+]
 
 // export functional component, contains
 // div with all the different route mappings
@@ -21,3 +25,6 @@ export default () => {
 
 // dummy route
 // <Route path='/hi' component={() => 'Hi'} />
+
+// going to use react-router-config, subset of react-router, but will mangle our routes
+// need to define them in an array of objects

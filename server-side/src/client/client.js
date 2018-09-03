@@ -14,13 +14,14 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 // created our store, but needed to import reducers
 import reducers from './reducers'
+import { renderRoutes } from 'react-router-config'
 
 const store = createStore(reducers, {}, applyMiddleware(thunk))
 
 hydrate(
   <Provider store={store}>
     <BrowserRouter>
-      <Routes />
+      <div>{renderRoutes(Routes)}</div>
     </BrowserRouter>
   </Provider>,
   document.querySelector('#root')
@@ -35,3 +36,5 @@ hydrate(
 // reducers, initial state which is an empty object, then hook up the applyMiddleware call and pass in the redux thunk library
 // then take this store and put into a provider, which will wrap our entire react app. Pass in store as prop to provider
 // provider now has a reference to the redux store, any time the store changes, that provider will alert any connected components that they need to re-render.
+
+// repalce all our routes with the new renderRoutes method
