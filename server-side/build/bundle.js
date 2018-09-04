@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,7 +73,7 @@ module.exports = require("react");
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-redux");
+module.exports = require("react-router-config");
 
 /***/ }),
 /* 2 */
@@ -85,9 +85,67 @@ module.exports = require("react-redux");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+// import { Route } from 'react-router-dom'
+
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _HomePage = __webpack_require__(20);
+
+var _HomePage2 = _interopRequireDefault(_HomePage);
+
+var _UsersListPage = __webpack_require__(21);
+
+var _UsersListPage2 = _interopRequireDefault(_UsersListPage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = [_extends({}, _HomePage2.default, {
+  path: '/',
+  // component: HomePage, replace with spread operator
+  exact: true
+}), {
+  loadData: _UsersListPage.loadData,
+  path: '/users',
+  component: _UsersListPage2.default
+}];
+
+// export functional component, contains
+// div with all the different route mappings
+
+// need to import this mapping into both the
+// client.js file and the index.js (renderer)
+// file, set up separate router in each
+
+// dummy route
+// <Route path='/hi' component={() => 'Hi'} />
+
+// going to use react-router-config, subset of react-router, but will mangle our routes
+// need to define them in an array of objects
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.fetchUsers = exports.FETCH_USERS = undefined;
 
-var _axios = __webpack_require__(13);
+var _axios = __webpack_require__(11);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -138,39 +196,37 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
 // import babel-polyfil at top of index.js
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = require("redux");
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(5);
+__webpack_require__(7);
 
-var _express = __webpack_require__(6);
+var _express = __webpack_require__(8);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _reactRouterConfig = __webpack_require__(18);
+var _reactRouterConfig = __webpack_require__(1);
 
-var _Routes = __webpack_require__(10);
+var _Routes = __webpack_require__(2);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
-var _renderer = __webpack_require__(7);
+var _renderer = __webpack_require__(12);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
-var _createStore = __webpack_require__(14);
+var _createStore = __webpack_require__(15);
 
 var _createStore2 = _interopRequireDefault(_createStore);
-
-var _vm = __webpack_require__(19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -185,16 +241,18 @@ app.get('*', function (req, res) {
   // some logic to initialize
   // and load data into the store, so now all
   // our loadData fns will have a ref to our ss redux store
-  // will return an array, so assign to a var called promised
+  // will return an array, so assign to a var called promises
   var promises = (0, _reactRouterConfig.matchRoutes)(_Routes2.default, req.path).map(function (_ref) {
     var route = _ref.route;
 
     return route.loadData ? route.loadData(store) : null;
   });
-  console.log(promises);
-
-  res.send((0, _renderer2.default)(req, store));
+  // when all data loading fns finished, will render app
+  Promise.all(promises).then(function () {
+    res.send((0, _renderer2.default)(req, store));
+  });
 });
+// shows promise that is representing that network request to go to our api and fetch that list of users, when resolved, network request completed and ready to render app
 
 app.listen(3000, function () {
   console.log('Listening on port 3000');
@@ -207,19 +265,27 @@ app.listen(3000, function () {
 // also import into client.js
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 7 */
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -233,17 +299,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(8);
+var _server = __webpack_require__(13);
 
-var _reactRouterDom = __webpack_require__(9);
+var _reactRouterDom = __webpack_require__(14);
 
-var _reactRouterConfig = __webpack_require__(18);
+var _reactRouterConfig = __webpack_require__(1);
 
-var _Routes = __webpack_require__(10);
+var _Routes = __webpack_require__(2);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
-var _reactRedux = __webpack_require__(1);
+var _reactRedux = __webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -284,19 +350,19 @@ exports.default = function (req, store) {
 // update to show static router with all our custom routes
 
 /***/ }),
-/* 8 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 9 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-router-dom");
 
 /***/ }),
-/* 10 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -306,46 +372,98 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(0);
+var _redux = __webpack_require__(5);
 
-var _react2 = _interopRequireDefault(_react);
+var _reduxThunk = __webpack_require__(16);
 
-var _Home = __webpack_require__(11);
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _Home2 = _interopRequireDefault(_Home);
+var _reducers = __webpack_require__(17);
 
-var _usersList = __webpack_require__(12);
-
-var _usersList2 = _interopRequireDefault(_usersList);
+var _reducers2 = _interopRequireDefault(_reducers);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import { Route } from 'react-router-dom'
-exports.default = [{
-  path: '/',
-  component: _Home2.default,
-  exact: true
-}, {
-  loadData: _usersList.loadData,
-  path: '/users',
-  component: _usersList2.default
-}];
+exports.default = function () {
+  var store = (0, _redux.createStore)(_reducers2.default, {}, (0, _redux.applyMiddleware)(_reduxThunk2.default));
 
-// export functional component, contains
-// div with all the different route mappings
+  return store;
+};
 
-// need to import this mapping into both the
-// client.js file and the index.js (renderer)
-// file, set up separate router in each
-
-// dummy route
-// <Route path='/hi' component={() => 'Hi'} />
-
-// going to use react-router-config, subset of react-router, but will mangle our routes
-// need to define them in an array of objects
+// work with store long before we call our render fn
 
 /***/ }),
-/* 11 */
+/* 16 */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-thunk");
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _redux = __webpack_require__(5);
+
+var _usersReducer = __webpack_require__(18);
+
+var _usersReducer2 = _interopRequireDefault(_usersReducer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// combine our reducers here
+exports.default = (0, _redux.combineReducers)({
+  users: _usersReducer2.default
+});
+
+// assign the users piece of state to key 'users'
+// value of that will be coming from the usersReducer
+// import the combinedReducers call into bothe the client.js file and the helpers/createStore.js file
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__(4);
+
+// FETCH_USERS is a named import, so needs {}
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _index.FETCH_USERS:
+      return action.payload.data;
+    default:
+      return state;
+  }
+};
+// matching reducer to watch for the FETCH_USERS action
+// the list of users is within an array, so going to default our initial state to be an empty array,
+// will receive the action as the second argument
+
+// now have users-reducer that will create a users piece of state that will store our array of different users we fetch from the api
+// need a new component to allow us to show the list of users on the screen
+// will call our action creator, whenever it is mounted, to fetch our list of users, then we'll pull our list of users out of our redux state object and then render them as a list
+//
+
+/***/ }),
+/* 19 */,
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -361,7 +479,7 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function Home() {
+var HomePage = function HomePage() {
   return _react2.default.createElement(
     'div',
     null,
@@ -380,13 +498,13 @@ var Home = function Home() {
   );
 };
 
-exports.default = Home;
+exports.default = HomePage;
 // need to ship down the js as well as the html
 // step 1, ship down html
 // step 2, load up event handlers etc
 
 /***/ }),
-/* 12 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -403,9 +521,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(1);
+var _reactRedux = __webpack_require__(3);
 
-var _actions = __webpack_require__(2);
+var _actions = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -415,16 +533,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var UsersList = function (_Component) {
-  _inherits(UsersList, _Component);
+var UsersListPage = function (_Component) {
+  _inherits(UsersListPage, _Component);
 
-  function UsersList() {
-    _classCallCheck(this, UsersList);
+  function UsersListPage() {
+    _classCallCheck(this, UsersListPage);
 
-    return _possibleConstructorReturn(this, (UsersList.__proto__ || Object.getPrototypeOf(UsersList)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (UsersListPage.__proto__ || Object.getPrototypeOf(UsersListPage)).apply(this, arguments));
   }
 
-  _createClass(UsersList, [{
+  _createClass(UsersListPage, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.props.fetchUsers();
@@ -456,7 +574,7 @@ var UsersList = function (_Component) {
     }
   }]);
 
-  return UsersList;
+  return UsersListPage;
 }(_react.Component);
 // going to assume we have a prop, users, so we need to map over that list of users and render out some element for every user we loaded up
 
@@ -472,130 +590,12 @@ function loadData(store) {
   return store.dispatch((0, _actions.fetchUsers)());
 }
 exports.loadData = loadData;
-exports.default = (0, _reactRedux.connect)(mapStateToProps, { fetchUsers: _actions.fetchUsers })(UsersList);
+exports.default = (0, _reactRedux.connect)(mapStateToProps, { fetchUsers: _actions.fetchUsers })(UsersListPage);
 // as soon as this compoent gets rendered on the screen its going to attempt to grab the list of users
 // then a starter render method
 // then mapStateToProps fn, will take our state object and return an object with users coming from state.users
 // and connect
 // the reducer we just created is being assigned to the users property of our state object
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _redux = __webpack_require__(3);
-
-var _reduxThunk = __webpack_require__(15);
-
-var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
-
-var _reducers = __webpack_require__(16);
-
-var _reducers2 = _interopRequireDefault(_reducers);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-  var store = (0, _redux.createStore)(_reducers2.default, {}, (0, _redux.applyMiddleware)(_reduxThunk2.default));
-
-  return store;
-};
-
-// work with store long before we call our render fn
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-module.exports = require("redux-thunk");
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _redux = __webpack_require__(3);
-
-var _usersReducer = __webpack_require__(17);
-
-var _usersReducer2 = _interopRequireDefault(_usersReducer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// combine our reducers here
-exports.default = (0, _redux.combineReducers)({
-  users: _usersReducer2.default
-});
-
-// assign the users piece of state to key 'users'
-// value of that will be coming from the usersReducer
-// import the combinedReducers call into bothe the client.js file and the helpers/createStore.js file
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _index = __webpack_require__(2);
-
-// FETCH_USERS is a named import, so needs {}
-
-exports.default = function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments[1];
-
-  switch (action.type) {
-    case _index.FETCH_USERS:
-      return action.payload.data;
-    default:
-      return state;
-  }
-};
-// matching reducer to watch for the FETCH_USERS action
-// the list of users is within an array, so going to default our initial state to be an empty array,
-// will receive the action as the second argument
-
-// now have users-reducer that will create a users piece of state that will store our array of different users we fetch from the api
-// need a new component to allow us to show the list of users on the screen
-// will call our action creator, whenever it is mounted, to fetch our list of users, then we'll pull our list of users out of our redux state object and then render them as a list
-//
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-router-config");
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-module.exports = require("vm");
 
 /***/ })
 /******/ ]);

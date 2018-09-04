@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchUsers } from '../actions'
 
-class UsersList extends Component {
+class UsersListPage extends Component {
   componentDidMount () {
     this.props.fetchUsers()
   }
@@ -34,7 +34,7 @@ function loadData (store) {
   return store.dispatch(fetchUsers())
 }
 export { loadData }
-export default connect(mapStateToProps, { fetchUsers })(UsersList)
+export default connect(mapStateToProps, { fetchUsers })(UsersListPage)
 // as soon as this compoent gets rendered on the screen its going to attempt to grab the list of users
 // then a starter render method
 // then mapStateToProps fn, will take our state object and return an object with users coming from state.users

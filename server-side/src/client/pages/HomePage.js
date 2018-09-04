@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <div>I'm the VERY VERY BEST home component</div>
@@ -9,7 +9,7 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage
 // need to ship down the js as well as the html
 // step 1, ship down html
 // step 2, load up event handlers etc

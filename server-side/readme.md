@@ -257,6 +257,26 @@ app.get('*', (req, res) => {
 
 ## Action creators and reducers
 
-* The sole purpose of our action creator is to make an Ajax requst over to our api and fetch that list of users
+* The sole purpose of our action creator is to make an Ajax request over to our api and fetch that list of users
 * then the users reducer will grab that list of users and store it through the reducer 
-* 
+
+## Review
+
+* users-list file, why we are making use fo the store in this process
+* usually pass action creators off to the connect helper
+* why didn't we use the connect fn for handling the action creator, as we usually do?
+* we are not usuing the connect tag because connect only works through communication with the provider
+* we are using redux, and doing all this data loading stuff before rendering our app at all
+* so no connect tag, no props with loadData, because we have not yet rendered our app, so cannot use connect tag
+* also, why we are using the dispatch fn here to load inside a loadData fn
+* __redux:__
+1. when we call an action creator, 
+2. it returns an action which gets passed to the dispatch fn of redux, 
+3. which pipes that action through our middlewares 
+4. and sends results to reducers inside our app
+* but, 
+* because we cannot use the connect tag, 
+* we are instead working with redux manually by calling the action creator ourselves, 
+* to produce an action, 
+* and then using the dispatch fn to pipe that action through all the midddlewares in our app, 
+* and eventually on to the reducers
