@@ -411,7 +411,7 @@ exports.default = {
   // export as an object
   // component as key, and assign the loadData fn to a key of loadData
 
-  // as soon as this compoent gets rendered on the screen its going to attempt to grab the list of users
+  // as soon as this component gets rendered on the screen its going to attempt to grab the list of users
   // then a starter render method
   // then mapStateToProps fn, will take our state object and return an object with users coming from state.users
   // and connect
@@ -452,11 +452,19 @@ var _Routes2 = _interopRequireDefault(_Routes);
 
 var _reactRedux = __webpack_require__(3);
 
+var _serializeJavascript = __webpack_require__(19);
+
+var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // single fn to render our app and return as string
 // static router needs 'context' passed in as empty object
 // replace <Routes /> inside staticRouter
+// we have access both to our redux store as an argument
+// and to our html template
+// by the time the store gets into this fn it already has all of the initial state inside it, so already called all of those loadData fns, already processed all of the actions resulting from that, and put it into the store
+// need to scrub state to avoid xss attacks
 exports.default = function (req, store) {
   var content = (0, _server.renderToString)(_react2.default.createElement(
     _reactRedux.Provider,
@@ -472,7 +480,11 @@ exports.default = function (req, store) {
     )
   ));
   // return string
-  return '\n      <html>\n        <head></head>\n        <body>\n          <div id="root">' + content + '</div>\n          <script src="bundle.js"></script>\n        </body>\n      </html>\n    ';
+  // going to add a second script tag, not going to attempt to load up a js file on the server, but put down some literal js code directly into template.
+  // take all the state out of our store
+  // replace JSON.stringify with serialize
+  // easy fix, just serialize the state
+  return '\n      <html>\n        <head></head>\n        <body>\n          <div id="root">' + content + '</div>\n          <script>\n          window.INITIAL_STATE = ' + (0, _serializeJavascript2.default)(store.getState()) + '\n          </script>\n          <script src="bundle.js"></script>\n        </body>\n      </html>\n    ';
 };
 //  so, renderer.js is going to house a fn that will simply render our react app and return it as a string
 
@@ -489,6 +501,8 @@ exports.default = function (req, store) {
 
 // const content = renderToString(<Home />)
 // update to show static router with all our custom routes
+
+// to avoid xss, will escape any characters involved in setting up script tag
 
 /***/ }),
 /* 13 */
@@ -601,6 +615,12 @@ exports.default = function () {
 // need a new component to allow us to show the list of users on the screen
 // will call our action creator, whenever it is mounted, to fetch our list of users, then we'll pull our list of users out of our redux state object and then render them as a list
 //
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+module.exports = require("serialize-javascript");
 
 /***/ })
 /******/ ]);

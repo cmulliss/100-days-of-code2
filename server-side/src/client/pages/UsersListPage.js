@@ -41,7 +41,7 @@ export default {
 // export as an object
 // component as key, and assign the loadData fn to a key of loadData
 
-// as soon as this compoent gets rendered on the screen its going to attempt to grab the list of users
+// as soon as this component gets rendered on the screen its going to attempt to grab the list of users
 // then a starter render method
 // then mapStateToProps fn, will take our state object and return an object with users coming from state.users
 // and connect

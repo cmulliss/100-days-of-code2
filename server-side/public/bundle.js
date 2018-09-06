@@ -8390,12 +8390,15 @@ var _reactRouterConfig = __webpack_require__(474);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// will create store and pas into the app
+
 // created our store, but needed to import reducers
 
 // middleware to handle asychronous action creators
+//* ***  all of our redux initialisation stuff is done inside this file ****
 // Startup point for the client side application
 // add code for boot up process
-var store = (0, _redux.createStore)(_reducers2.default, {}, (0, _redux.applyMiddleware)(_reduxThunk2.default));
+var store = (0, _redux.createStore)(_reducers2.default, window.INITIAL_STATE, (0, _redux.applyMiddleware)(_reduxThunk2.default));
 // provider to communicate data from store to any connected components in our app
 
 // createStore to create redux store
@@ -34115,7 +34118,7 @@ exports.default = {
   // export as an object
   // component as key, and assign the loadData fn to a key of loadData
 
-  // as soon as this compoent gets rendered on the screen its going to attempt to grab the list of users
+  // as soon as this component gets rendered on the screen its going to attempt to grab the list of users
   // then a starter render method
   // then mapStateToProps fn, will take our state object and return an object with users coming from state.users
   // and connect

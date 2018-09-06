@@ -1,3 +1,4 @@
+//* ***  all of our redux initialisation stuff is done inside this file ****
 // Startup point for the client side application
 // add code for boot up process
 import 'babel-polyfill'
@@ -16,7 +17,12 @@ import { Provider } from 'react-redux'
 import reducers from './reducers'
 import { renderRoutes } from 'react-router-config'
 
-const store = createStore(reducers, {}, applyMiddleware(thunk))
+// will create store and pas into the app
+const store = createStore(
+  reducers,
+  window.INITIAL_STATE,
+  applyMiddleware(thunk)
+)
 
 hydrate(
   <Provider store={store}>
