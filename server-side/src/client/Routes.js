@@ -1,19 +1,18 @@
 import React from 'react'
 // import { Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import UsersListPage, { loadData } from './pages/UsersListPage'
+// usersListPage an object with a key component and a key of loadData
+import UsersListPage from './pages/UsersListPage'
 
 export default [
   {
     ...HomePage,
     path: '/',
-    // component: HomePage, replace with spread operator
     exact: true
   },
   {
-    loadData: loadData,
-    path: '/users',
-    component: UsersListPage
+    ...UsersListPage,
+    path: '/users'
   }
 ]
 

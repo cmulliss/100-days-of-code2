@@ -1118,9 +1118,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 110: Tuesday September 3, 2018
 
-Today's Progress: 
+Today's Progress: creating pages and refactoring.
 
-Thoughts: 
+Thoughts: A bit lost, but continuing with hope all will become clearer.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -1128,9 +1128,9 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 110: Wednesday September 4, 2018
 
-Today's Progress: 
+Today's Progress: More refactoring.
 
-Thoughts: 
+Thoughts: Understand some of this.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
 
@@ -1138,10 +1138,8 @@ Link to work: <https://github.com/cmulliss/100-days-of-code2>
 100 Days Of Code - Log
 Day 110: Thursday September 5, 2018
 
-Today's Progress: 
+Today's Progress: State rehydration on browser and why.
 
-Thoughts: 
+Thoughts: Confusing in parts. Definitely will help to work through this again. Plan to do another 100 days.
 
 Link to work: <https://github.com/cmulliss/100-days-of-code2>
-
-

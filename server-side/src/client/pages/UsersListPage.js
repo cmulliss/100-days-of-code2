@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchUsers } from '../actions'
 
-class UsersListPage extends Component {
+class UsersList extends Component {
   componentDidMount () {
     this.props.fetchUsers()
   }
@@ -27,14 +27,20 @@ function mapStateToProps (state) {
   return { users: state.users }
 }
 function loadData (store) {
-  // manual dispatch, calling fetchUsers action creator
-  // and pass results into store.dispatch
-  // make network request to api, going to return a promise
-  // representing the nework request
   return store.dispatch(fetchUsers())
 }
-export { loadData }
-export default connect(mapStateToProps, { fetchUsers })(UsersListPage)
+// we take this object here and merge it with each of our route configuration objects within the Routes file
+export default {
+  loadData,
+  component: connect(mapStateToProps, { fetchUsers })(UsersList)
+}
+
+// condense 2 export statements to one, from:
+// export { loadData }
+// export default connect(mapStateToProps, { fetchUsers })(UsersListPage)
+// export as an object
+// component as key, and assign the loadData fn to a key of loadData
+
 // as soon as this compoent gets rendered on the screen its going to attempt to grab the list of users
 // then a starter render method
 // then mapStateToProps fn, will take our state object and return an object with users coming from state.users
